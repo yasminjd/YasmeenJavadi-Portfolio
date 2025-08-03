@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Yasmeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Yasmeen.</a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="skills.html" class="nav-link">Skills</a></li>
+                        <li><a href="experience.html" class="nav-link">Experiences</a></li>
+                        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <main class="content-section">
+            <header class="page-header">
+                <h1 class="page-title">Projects.</h1>
+            </header>
+
+            <div class="projects-container">
+                <div class="projects-sidebar">
+                    <div class="project-item active" data-project="stya">
+                        <span class="project-name">Stya – AI Fashion Stylist</span>
+                    </div>
+                    <div class="project-item" data-project="lawtimepro">
+                        <span class="project-name">LawTimePro – Legal Automation</span>
+                    </div>
+                    <div class="project-item" data-project="rocket">
+                        <span class="project-name">Rocket – AI Resume Analyzer</span>
+                    </div>
+                </div>
+
+                <div class="projects-content">
+                    <div id="project-stya" class="project-detail active">
+                        <h2 class="project-title">Stya – AI Fashion Stylist iOS App <span class="tech-highlight">Available on App Store</span></h2>
+                        <p class="project-duration">Personal Project • April 2025</p>
+                        <p class="project-url"><a href="https://stya.ai" target="_blank">https://stya.ai</a></p>
+                        
+                        <div class="project-features">
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Engineered and published an end-to-end iOS application, scaling to 100+ active users via LLM-driven workflows</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Built a computer-vision pipeline to classify clothing-item photos and assemble a virtual closet</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Developed an interactive AI chatbot for prompt-driven outfit advice</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Architected an LLM-based recommendation engine that factors in weather, location, and wardrobe data to suggest personalized looks</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Integrated a full analytics stack to capture user interactions and inform continuous feature improvements</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="project-lawtimepro" class="project-detail">
+                        <h2 class="project-title">LawTimePro – AI-Powered Legal Write-Off Automation Tool <span class="tech-highlight">Built with FastAPI & React</span></h2>
+                        <p class="project-duration">Personal Project • May 2025</p>
+                        
+                        <div class="project-features">
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Automated screen-capture + Tesseract OCR pipeline to log daily billable activity into structured JSON</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>FastAPI backend batching GPT-4 calls every 5 min to draft firm-compliant write-offs, slashing API usage by ~80%</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>React dashboard with real-time summaries, audit logs, and compliance checks for seamless review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="project-rocket" class="project-detail">
+                        <h2 class="project-title">Rocket – AI Resume Analyzer & Generator Web App <span class="tech-highlight">Built with React & Firebase</span></h2>
+                        <p class="project-duration">Personal Project • February 2025</p>
+                        
+                        <div class="project-features">
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Developed a React/Tailwind frontend and Firebase backend (Cloud Functions, Firestore, Auth) for uploading resumes and job descriptions</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Leveraged GPT-4 to analyze resumes and generate optimized, role-specific CVs with quantified achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

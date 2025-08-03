@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Yasmeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Yasmeen.</a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="skills.html" class="nav-link">Skills</a></li>
+                        <li><a href="experience.html" class="nav-link active">Experiences</a></li>
+                        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <main class="content-section">
+            <header class="page-header">
+                <h1 class="page-title">Experience.</h1>
+            </header>
+
+            <div class="experience-container">
+                <div class="experience-sidebar">
+                    <div class="company-item active" data-company="nextgen">
+                        <span class="company-name">Next Gen AI Consulting</span>
+                    </div>
+                    <div class="company-item" data-company="njit">
+                        <span class="company-name">NJIT</span>
+                    </div>
+                </div>
+
+                <div class="experience-content">
+                    <div id="experience-nextgen" class="experience-detail active">
+                        <h2 class="job-title">Artificial Intelligence & Data Engineering Analyst <span class="company-highlight">@ Next Gen AI Consulting</span></h2>
+                        <p class="job-duration">December 2024 - July 2025 • Remote</p>
+                        
+                        <div class="job-responsibilities">
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Designed and analyzed end-to-end Amelia conversation flows, leveraging Amelia's NLU and Answers features, and integrated them with backend systems (Step Functions, Lambda, custom APIs) to power a RAG-based FAQ retrieval solution</p>
+                            </div>
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Ingested Amelia conversation logs via its Data Export API into S3, built Redshift Serverless ETL pipelines, and crafted QuickSight dashboards to visualize session metrics (volume, intent accuracy, fallback rates), enabling data-driven tuning of NLU models and dialogue flows</p>
+                            </div>
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Engineered a fully serverless, event-driven customer-engagement platform on AWS—using Amazon Connect for contact flows, Lex V2 and Bedrock agents for conversational intelligence, orchestrated by Step Functions and Lambda—to automate routine inquiries, boost first-contact accuracy, and elevate user experience</p>
+                            </div>
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Architected a multi-agent collaboration POC for healthcare support on AWS, integrating Lex V2 bots and Bedrock agents with backend services via EventBridge and Step Functions to validate scalable, fault-tolerant conversational workflows</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="experience-njit" class="experience-detail">
+                        <h2 class="job-title">Undergraduate Translational Research Internship <span class="company-highlight">@ New Jersey Institute of Technology</span></h2>
+                        <p class="job-duration">June 2024 - August 2024 • Newark, NJ</p>
+                        
+                        <div class="job-responsibilities">
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Optimized Time-LLM, a transformer-based forecasting model introduced in "Time-LLM: Time Series Forecasting by Reprogramming Large Language Models" (2023), by tuning hyperparameters and evaluating its predictive performance on weather and stock market datasets</p>
+                            </div>
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Conducted extensive experimentation by adjusting model parameters (e.g., context window size, batch size, learning rate) and analyzing their impact on forecasting accuracy</p>
+                            </div>
+                            <div class="responsibility">
+                                <span class="checkmark">✓</span>
+                                <p>Implemented and benchmarked performance using Python, PyTorch, TensorFlow, NumPy, and Pandas, leveraging HPC environments with multi-core CPUs and NVIDIA GPUs to enhance model efficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
