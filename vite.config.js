@@ -13,5 +13,8 @@ export default defineConfig({
         certificates: resolve(__dirname, 'certificates.html'),
       },
     },
+    copyPublicDir: true,
   },
+  // Copy additional assets to build
+  assetsInclude: ['**/*.pdf'],
 })
