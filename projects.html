@@ -42,7 +42,10 @@
                         <span class="project-name">LawTimePro – Legal Automation</span>
                     </div>
                     <div class="project-item" data-project="rocket">
-                        <span class="project-name">Rocket – AI Resume Analyzer</span>
+                        <span class="project-name">Rocket – AI Resume Builder</span>
+                    </div>
+                    <div class="project-item" data-project="itsupport">
+                        <span class="project-name">Enterprise IT Support Agent</span>
                     </div>
                 </div>
 
@@ -64,7 +67,12 @@
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>Tools & Tech:</strong> Frontend: Swift, SwiftUI | Backend: Firebase Authentication, Firestore, Storage | AI APIs: OpenAI GPT-4.1, FASHN API | Frameworks: Vision, Swift Package Manager | IDEs: Windsurf, Cursor AI IDE</p>
+                                <p><strong>Tech Stack:</strong><br/>
+                                • <strong>Frontend:</strong> Swift, SwiftUI<br/>
+                                • <strong>Backend:</strong> Firebase Authentication, Firestore, Storage<br/>
+                                • <strong>AI APIs:</strong> OpenAI GPT-4.1, FASHN API<br/>
+                                • <strong>Frameworks:</strong> Vision, Swift Package Manager<br/>
+                                • <strong>Development Tools:</strong> Windsurf, Cursor AI IDE</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
@@ -79,37 +87,106 @@
                     </div>
 
                     <div id="project-lawtimepro" class="project-detail">
-                        <h2 class="project-title">LawTimePro – AI-Powered Legal Write-Off Automation Tool <span class="tech-highlight">Built with FastAPI & React</span></h2>
-                        <p class="project-duration">Personal Project • May 2025</p>
+                        <h2 class="project-title">LawTime-Pro – Legal Productivity & Billing Automation <span class="tech-highlight">In Progress</span></h2>
+                        <p class="project-duration">Collaborative Project • May 2025</p>
                         
                         <div class="project-features">
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p>Automated screen-capture + Tesseract OCR pipeline to log daily billable activity into structured JSON</p>
+                                <p><strong>Summary:</strong> LawTime-Pro is an AI-powered productivity and billing automation platform designed for law firms. It captures screen activity at regular intervals, applies OCR to extract on-screen content, and uses GPT-4 to categorize tasks into billable and non-billable work based on firm-specific guidelines. A real-time dashboard provides legal teams with detailed insights and reporting to support more accurate billing, compliance, and performance tracking. This project is currently in active development and being expanded as part of a two-person collaboration.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p>FastAPI backend batching GPT-4 calls every 5 min to draft firm-compliant write-offs, slashing API usage by ~80%</p>
+                                <p><strong>My Role: Co-Developer & AI Integration Lead:</strong> As part of a two-person development team, I contributed to the architecture, backend, AI integration, and dashboard functionality: AI Integration: Led the implementation of GPT-4 for intelligent activity classification. Screen Monitoring & OCR: Built the automated screen capture system and OCR pipeline. Guideline Engine: Developed a billing rule upload and parsing system to customize classification logic per firm. Dashboard: Co-developed a real-time React dashboard for tracking and visualizing activity. Backend: Helped build the FastAPI backend, design RESTful endpoints, and configure processing schedules.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p>React dashboard with real-time summaries, audit logs, and compliance checks for seamless review</p>
+                                <p><strong>Tech Stack:</strong><br/>
+                                • <strong>Backend:</strong> FastAPI (Python), Uvicorn, Tesseract OCR, OpenAI GPT-4<br/>
+                                • <strong>Frontend:</strong> React 18, Axios, Recharts, date-fns, React Datepicker<br/>
+                                • <strong>Data Handling:</strong> JSON-based logging, support for DOCX, TXT, PDF, and Markdown<br/>
+                                • <strong>System Design:</strong> 30-second screen capture, 5-minute batch GPT analysis, real-time dashboard updates</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Key Features (In Progress):</strong> Automated screen capture and text extraction using OCR, GPT-4-based activity classification engine, Uploadable billing guidelines for firm-specific categorization, Real-time activity dashboard with billable vs non-billable breakdown, PDF/DOCX export and report generation (planned)</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Objectives:</strong> Automate legal time tracking to eliminate manual entry, increase billing accuracy by enforcing custom rules, improve productivity visibility across legal teams, provide a scalable and modular platform for law firms, and ensure secure, efficient, and user-friendly performance monitoring</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="project-rocket" class="project-detail">
-                        <h2 class="project-title">Rocket – AI Resume Analyzer & Generator Web App <span class="tech-highlight">Built with React & Firebase</span></h2>
+                        <h2 class="project-title">Rocket – AI-Powered Resume Builder <span class="tech-highlight">Full-Stack Application</span></h2>
                         <p class="project-duration">Personal Project • February 2025</p>
+                        <p class="project-url"><a href="https://resume-webapp-896b9.firebaseapp.com" target="_blank">https://resume-webapp-896b9.firebaseapp.com</a></p>
                         
                         <div class="project-features">
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p>Developed a React/Tailwind frontend and Firebase backend (Cloud Functions, Firestore, Auth) for uploading resumes and job descriptions</p>
+                                <p><strong>Summary:</strong> Rocket is a full-stack web application that automates the resume-building process using AI and LaTeX. Users can upload their existing resume or start from scratch, and the system intelligently parses, tailors, and compiles job-ready resumes using professional templates. The project was designed to eliminate the repetitive, time-consuming task of customizing resumes for each job. By combining GPT-4 with structured templates, Rocket significantly reduces resume creation time while improving quality and personalization.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p>Leveraged GPT-4 to analyze resumes and generate optimized, role-specific CVs with quantified achievements</p>
+                                <p><strong>My Role: Full-Stack Contributor:</strong> I contributed to both backend and frontend development, with responsibilities including: Backend: Built RESTful API endpoints in Express.js with TypeScript, integrated GPT-4 for resume parsing and generation, and set up Firebase Firestore for data management. Authentication: Implemented secure login with Firebase Auth (OAuth and email/password). File Handling: Developed PDF/DOCX parsing and LaTeX compilation systems. Frontend: Built UI with React and TailwindCSS, including PDF preview and a multi-step resume builder. Deployment: Deployed the backend to Heroku and hosted the frontend on Firebase.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Tech Stack:</strong><br/>
+                                • <strong>Frontend:</strong> React, TailwindCSS, Vite, React Router, PDF.js, Axios, Firebase Hooks<br/>
+                                • <strong>Backend:</strong> Express.js, TypeScript, OpenAI API, Firebase Admin SDK, Multer, PDFLaTeX, docx<br/>
+                                • <strong>Infrastructure:</strong> Firebase Firestore, Firebase Authentication, Firebase Storage, Firebase Hosting, Heroku<br/>
+                                • <strong>AI:</strong> GPT-4 for resume parsing, content generation, and job-specific tailoring<br/>
+                                • <strong>Development Tools:</strong> Jest, Supertest, Git, ESLint, npm</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Key Features:</strong> Resume parsing with >95% accuracy, AI-generated content tailored to job descriptions, Multiple export formats (PDF, DOCX), Professional LaTeX-based templates, Resume and job description version management, Secure user authentication, Cover letter generation</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Outcomes:</strong> Reduced resume creation time from hours to under 30 seconds, Improved formatting quality and ATS compatibility through LaTeX, Real-time database sync and scalable backend, Clean, responsive user interface with modern UX best practices</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="project-itsupport" class="project-detail">
+                        <h2 class="project-title">Enterprise IT Support Agent – AI-Powered Healthcare POC <span class="tech-highlight">AWS Cloud Architecture</span></h2>
+                        <p class="project-duration">Professional Project • 2024</p>
+                        
+                        <div class="project-features">
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Summary:</strong> Developed a proof-of-concept AI-powered IT support system for a healthcare organization, designed to handle common support requests such as password resets, account unlocks, and troubleshooting guidance. The system supports multi-modal interaction through both voice (via Amazon Connect) and chat, leveraging LLMs, secure workflows, and a scalable, serverless infrastructure tailored for compliance-heavy environments.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>My Role: Solution Architect:</strong> As the Solution Architect, I was responsible for designing and implementing the system architecture and core components:<br/>
+                                • <strong>Architecture Design:</strong> Built the end-to-end cloud-native architecture using Amazon Connect, Lex V2, AWS Bedrock Agent (Claude 3 Haiku), Lambda, and S3<br/>
+                                • <strong>Multi-Modal Integration:</strong> Orchestrated a unified fulfillment flow for both voice and chat channels using the same logic across modalities<br/>
+                                • <strong>Conversational AI:</strong> Developed Lambda functions for intent classification and fulfillment, routing requests to knowledge base, account actions, or escalation paths<br/>
+                                • <strong>Identity Verification:</strong> Implemented secure mock authentication workflows for employee ID and email validation<br/>
+                                • <strong>Knowledge Base Search:</strong> Integrated over 10 technical documents using vector-based retrieval for natural language queries<br/>
+                                • <strong>Performance Testing:</strong> Designed and executed end-to-end test flows for latency, throughput, and fallback validation</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Tech Stack:</strong><br/>
+                                • <strong>Infrastructure:</strong> Amazon Connect (voice), Lex V2 (chat), AWS Bedrock Agent (Claude 3 Haiku), Lambda, S3, IAM, CloudFormation<br/>
+                                • <strong>Development Tools:</strong> Python, JSON, Git, AWS CLI<br/>
+                                • <strong>AI Components:</strong> Bedrock agent orchestration, document embedding for retrieval<br/>
+                                • <strong>Security & Compliance:</strong> HIPAA-ready AWS architecture, scoped IAM roles, and serverless isolation</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Key Outcomes:</strong><br/>
+                                • <strong>Multi-Modal Capability:</strong> Seamless support via both voice and chat with unified logic<br/>
+                                • <strong>Low Latency:</strong> Achieved 200–500ms average response time under load<br/>
+                                • <strong>Scalability:</strong> Supported 1,000+ concurrent users across channels<br/>
+                                • <strong>Automation Impact:</strong> Successfully automated password reset and unlock flows<br/>
+                                • <strong>Production Readiness:</strong> Roadmap defined for LDAP integration, improved monitoring, and broader system connectivity</p>
                             </div>
                         </div>
                     </div>
