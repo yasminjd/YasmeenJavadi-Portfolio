@@ -111,14 +111,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const getInTouchBtn = document.getElementById('getInTouchBtn');
     if (getInTouchBtn) {
         getInTouchBtn.addEventListener('click', function() {
-            const email = 'yasmeenjavadi1@gmail.com';
+            const email = 'javadiyasmeen@gmail.com';
             
             // Copy email to clipboard
             navigator.clipboard.writeText(email).then(() => {
                 // Show success feedback
                 const originalText = this.textContent;
                 this.textContent = '📋 Email Copied!';
-                this.style.background = '#48bb78';
+                this.style.background = '#10a37f';
                 
                 setTimeout(() => {
                     this.textContent = originalText;
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show success feedback
                 const originalText = this.textContent;
                 this.textContent = '📋 Email Copied!';
-                this.style.background = '#48bb78';
+                this.style.background = '#10a37f';
                 
                 setTimeout(() => {
                     this.textContent = originalText;

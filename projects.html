@@ -51,36 +51,124 @@
 
                 <div class="projects-content">
                     <div id="project-stya" class="project-detail active">
-                        <h2 class="project-title">Stya – AI-Powered Personal Stylist App <span class="tech-highlight">Available on App Store</span></h2>
-                        <p class="project-duration">Personal Project • April 2025</p>
+                        <h2 class="project-title">Stya <span class="tech-highlight">Interim Product Manager</span></h2>
+                        <p class="project-duration">Newark, NJ • July 2025 – December 2025</p>
                         <p class="project-url"><a href="https://stya.ai" target="_blank">https://stya.ai</a></p>
                         <p class="project-url"><a href="https://apps.apple.com/us/app/stya/id6745906113" target="_blank">Download on App Store</a></p>
                         
                         <div class="project-features">
+                            <h3 class="section-subtitle">Core Responsibilities</h3>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>Summary:</strong> Stya is a mobile app that acts as an AI-powered personal stylist. Users upload images of their clothing, and the app generates personalized outfit recommendations using generative AI. It even visualizes how outfits would look on the user — eliminating the need to try them on physically. Future iterations will include agentic AI that shops for users automatically based on their wardrobe, preferences, and lifestyle context.</p>
+                                <p>Defined product requirements and led development of an iOS application leveraging generative AI through Google's Gemini 2.5 Flash model for photorealistic virtual try-on experiences, reducing the gap between style inspiration and purchase in fashion e-commerce.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>My Role:</strong> Co-founder and lead engineer. I worked on the iOS architecture (Swift), backend integration (Firebase), and GPT-4 prompt engineering trained on fashion stylist research. I also coordinated FASHN API integration for try-on visualization and iterated rapidly using AI-enhanced IDEs like Windsurf and Cursor.</p>
+                                <p>Architected the complete end-to-end user flow beginning with full-body image upload, followed by natural language style prompting, then AI image generation, integrated with Google Lens visual search, and concluding with a shoppable product carousel featuring retailer deep links and real-time pricing.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>Tech Stack:</strong><br/>
-                                • <strong>Frontend:</strong> Swift, SwiftUI<br/>
-                                • <strong>Backend:</strong> Firebase Authentication, Firestore, Storage<br/>
-                                • <strong>AI APIs:</strong> OpenAI GPT-4.1, FASHN API<br/>
-                                • <strong>Frameworks:</strong> Vision, Swift Package Manager<br/>
-                                • <strong>Development Tools:</strong> Windsurf, Cursor AI IDE</p>
+                                <p>Optimized the AI inference pipeline by collaborating with engineering to reduce average session latency by 1.8× while improving style-matching accuracy by 40% through iterative prompt engineering, image preprocessing techniques, and API request batching strategies.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>Outcome:</strong> Successfully launched on App Store with 5.0-star rating, actively maintaining with regular updates (latest v1.3), growing user base providing positive feedback on time-saving and style discovery features</p>
+                                <p>Designed the Firebase-based cloud architecture encompassing multi-provider authentication supporting email and password, Apple Sign-In, Google Sign-In, and phone OTP verification, along with Firestore document modeling for user profiles and subscription state, Firebase Storage for secure image assets, and Cloud Functions for serverless API orchestration.</p>
                             </div>
                             <div class="feature">
                                 <span class="checkmark">✓</span>
-                                <p><strong>Personal Motivation:</strong> Stya solves a real frustration I personally face as a fashion-conscious shopper — spending time every day trying to figure out what to wear, despite having a full closet. After hearing similar experiences from friends and seeing how widespread this problem was (especially among women), we built Stya to offer a smarter way to dress with confidence using AI.</p>
+                                <p>Implemented a tiered subscription monetization model featuring usage-based generation limits with free users receiving 30 generations per day and premium users receiving unlimited access, while defining StoreKit integration requirements and RevenueCat analytics instrumentation to track monthly recurring revenue, churn rates, and conversion funnels.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Conducted user acceptance testing with over 500 beta users, synthesizing qualitative feedback and quantitative usage data into prioritized backlog items and achieving a 95% satisfaction rating through continuous iteration on UX flows and AI output quality.</p>
+                            </div>
+
+                            <h3 class="section-subtitle">Technical Product Ownership</h3>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Wrote detailed technical specifications for the AI image manipulation service integrating Gemini 2.5 Flash multimodal capabilities, including prompt templates, reference photo handling, and response parsing logic for consistent style outputs.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Defined API contracts between the iOS client and Firebase Cloud Functions, specifying request and response schemas for the shopping recommendations endpoint powered by Google Lens via SerpApi, user authentication flows, and image upload endpoints.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Led the model selection and evaluation process by benchmarking Gemini 2.5 Flash against alternative models on accuracy, latency, cost per generation, and output consistency, then documented trade-offs for stakeholder decision-making.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Designed the product data model in Firestore including user profiles, subscription state management, generation tracking with daily limits and reset logic, and image URL storage with Firebase Storage security rules.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Established error handling and edge case requirements for authentication failures, network timeouts, AI generation failures, and empty product search results, ensuring graceful degradation and user-friendly error messaging throughout the application.</p>
+                            </div>
+
+                            <h3 class="section-subtitle">Cross-Functional Leadership</h3>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Managed a 4-person cross-functional team consisting of an iOS engineer, backend engineer, designer, and ML specialist, facilitating daily standups, sprint planning sessions, and retrospectives using JIRA.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Translated complex AI capabilities into user-facing features by collaborating with design to create intuitive prompt suggestions spanning dress styles, haircuts, accessories, and aesthetic categories that lowered the barrier to user engagement.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Delivered stakeholder demos that communicated technical value to non-technical audiences, including investor updates focused on AI differentiation and product-market fit validation.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p>Authored the privacy policy and App Store compliance documentation, ensuring adherence to GDPR, CCPA, and Apple App Store Review Guidelines for user data handling and AI-generated content.</p>
+                            </div>
+
+                            <h3 class="section-subtitle">Key Technical Decisions Made</h3>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>AI Model:</strong> Gemini 2.5 Flash. Best balance of multimodal capability, latency, and cost for image-to-image transformation.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Product Search:</strong> Google Lens via SerpApi. Visual search accuracy superior to text-based alternatives with real retailer inventory.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Auth Provider:</strong> Firebase Auth. Multi-provider support including Apple, Google, phone, and email with minimal custom backend.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Database:</strong> Firestore. Real-time sync, offline support, and seamless iOS SDK integration.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Image Storage:</strong> Firebase Storage. Security rules, CDN delivery, and direct upload from iOS client.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Subscription:</strong> StoreKit 2 with RevenueCat. Native iOS purchase flow with cross-platform analytics.</p>
+                            </div>
+
+                            <h3 class="section-subtitle">Technologies & Tools</h3>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>AI and Machine Learning:</strong> Google Gemini 2.5 Flash for multimodal generation, Google Lens for visual search, SerpApi for product data, and prompt engineering techniques.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Cloud Infrastructure:</strong> Firebase including Authentication, Firestore, Storage, and Cloud Functions, hosted on Google Cloud Platform.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>iOS Development:</strong> SwiftUI, StoreKit 2, PhotosUI, async/await concurrency, Combine framework, and MVVM architecture.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Product Tools:</strong> JIRA for project management, Figma for design collaboration, TestFlight for beta distribution, App Store Connect for releases, and RevenueCat for subscription analytics.</p>
+                            </div>
+                            <div class="feature">
+                                <span class="checkmark">✓</span>
+                                <p><strong>Methodologies:</strong> Agile and Scrum practices, continuous discovery, user acceptance testing, and A/B testing.</p>
                             </div>
                         </div>
 
