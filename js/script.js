@@ -289,4 +289,57 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
+
+    // Resume Modal Functionality
+    const resumeBtn = document.getElementById('resumeBtn');
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeIframe = document.getElementById('resumeIframe');
+    const resumeModalClose = document.querySelector('.resume-modal-close');
+    const resumeModalOverlay = document.querySelector('.resume-modal-overlay');
+
+    if (resumeBtn && resumeModal) {
+        // Open modal when Resume button is clicked
+        resumeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Load the PDF into iframe (lazy load for better performance)
+            if (!resumeIframe.src) {
+                resumeIframe.src = 'YasmeenJavadi.pdf';
+            }
+            resumeModal.style.display = 'flex';
+            // Trigger reflow for animation
+            resumeModal.offsetHeight;
+            resumeModal.classList.add('active');
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal function
+        function closeResumeModal() {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = '';
+            // Hide modal after animation completes
+            setTimeout(() => {
+                if (!resumeModal.classList.contains('active')) {
+                    resumeModal.style.display = 'none';
+                }
+            }, 300);
+        }
+
+        // Close modal when X button is clicked
+        if (resumeModalClose) {
+            resumeModalClose.addEventListener('click', closeResumeModal);
+        }
+
+        // Close modal when clicking outside (on overlay)
+        if (resumeModalOverlay) {
+            resumeModalOverlay.addEventListener('click', closeResumeModal);
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
+                closeResumeModal();
+            }
+        });
+    }
 });

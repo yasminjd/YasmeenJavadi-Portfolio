@@ -62,13 +62,22 @@
                     <span class="connect-icon">💻</span>
                     GitHub
                 </a>
-                <a href="YasmeenJavadi.pdf?v=2" class="btn btn-connect resume" target="_blank">
+                <button id="resumeBtn" class="btn btn-connect resume">
                     <span class="connect-icon">📄</span>
                     Resume
-                </a>
+                </button>
 
             </div>
         </section>
+
+        <!-- Resume Modal -->
+        <div id="resumeModal" class="resume-modal">
+            <div class="resume-modal-overlay"></div>
+            <div class="resume-modal-content">
+                <button class="resume-modal-close" aria-label="Close resume">&times;</button>
+                <iframe id="resumeIframe" class="resume-iframe" title="Yasmeen Javadi Resume"></iframe>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js" type="module"></script>
