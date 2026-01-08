@@ -107,7 +107,7 @@
                         <div class="version-selector">
                             <h3 class="version-selector-title">Select Version to Explore</h3>
                             <div class="version-cards">
-                                <div class="version-card" data-version="v1">
+                                <div class="version-card" data-version="v2">
                                     <div class="version-badge">V1</div>
                                     <h4 class="version-name">Version 1</h4>
                                     <p class="version-tagline"><!-- PLACEHOLDER: e.g., "MVP Release" --></p>
@@ -116,7 +116,7 @@
                                         Click to explore
                                     </span>
                                 </div>
-                                <div class="version-card" data-version="v2">
+                                <div class="version-card" data-version="v1">
                                     <div class="version-badge">V2</div>
                                     <h4 class="version-name">Version 2</h4>
                                     <p class="version-tagline"><!-- PLACEHOLDER: e.g., "Production App" --></p>
@@ -254,14 +254,23 @@
                         <div class="version-content" data-version="v2">
                             <!-- Section 1: App Overview -->
                             <div class="project-section project-overview">
-                                <div class="project-description">
-                                    <p><!-- PLACEHOLDER: V2 app description paragraph --></p>
-                                </div>
-
-                                <div class="project-media-gallery">
-                                    <div class="media-placeholder">
-                                        <span>📱</span>
-                                        <p>Version 2 media coming soon</p>
+                                <div class="app-showcase">
+                                    <div class="app-showcase-video">
+                                        <div class="video-container" id="stya-v2-video-container">
+                                            <div class="video-loading">
+                                                <span class="loading-spinner"></span>
+                                                <p>Loading demo video...</p>
+                                            </div>
+                                            <video id="stya-v2-video" controls playsinline class="project-video portrait" style="display: none;">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                    <div class="app-showcase-description">
+                                        <h3 class="app-description-title">About the App</h3>
+                                        <p class="app-description-text">
+                                            Stya is an AI-powered iOS wardrobe management and styling app that helps users digitize their closet, receive personalized outfit recommendations, and visualize complete looks on their own body. Users can photograph clothing items which are automatically analyzed and categorized using computer vision and GPT-4. The app generates occasion-based outfit suggestions using the user's actual wardrobe, creates photorealistic outfit visualizations using generative AI, and provides weather-aware styling recommendations. It features a token-based monetization system, real-time push notifications when outfit visualizations are ready, and supports multiple authentication methods including Apple Sign-In and Google Sign-In.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -272,42 +281,39 @@
                                 
                                 <div class="role-content">
                                     <div class="role-position">
-                                        <span class="role-badge"><!-- PLACEHOLDER: V2 Role --></span>
-                                        <span class="role-duration"><!-- PLACEHOLDER: V2 Duration --></span>
+                                        <span class="role-badge">Project Manager & Full Stack Engineer</span>
                                     </div>
 
                                     <div class="role-details">
-                                        <h4>What I Did</h4>
+                                        <h4>Key Responsibilities</h4>
                                         <ul class="role-list">
-                                            <li><!-- V2 Responsibility 1 --></li>
-                                            <li><!-- V2 Responsibility 2 --></li>
-                                            <li><!-- V2 Responsibility 3 --></li>
+                                            <li><strong>End-to-End Product Development</strong> — Led product development from concept to App Store-ready application</li>
+                                            <li><strong>Full Stack Architecture</strong> — Architected the complete technology stack spanning iOS frontend and serverless backend</li>
+                                            <li><strong>AI Integration</strong> — Designed and implemented AI integrations including clothing analysis, outfit generation, and image visualization</li>
+                                            <li><strong>Cloud Infrastructure</strong> — Built scalable cloud infrastructure using Firebase suite (Auth, Firestore, Storage, Cloud Functions, Analytics)</li>
+                                            <li><strong>Monetization System</strong> — Developed the token-based monetization system with StoreKit 2 for in-app purchases</li>
+                                            <li><strong>Real-Time Notifications</strong> — Created real-time notification system for background outfit generation</li>
+                                            <li><strong>Third-Party Integrations</strong> — Integrated multiple third-party APIs (OpenWeatherMap, OpenAI, Apple App Store)</li>
+                                            <li><strong>Project Management</strong> — Managed project timelines, technical decisions, and feature prioritization</li>
                                         </ul>
                                     </div>
 
                                     <div class="role-results">
                                         <h4>Results & Impact</h4>
-                                        <div class="impact-grid">
-                                            <div class="impact-card">
-                                                <span class="impact-number">--</span>
-                                                <span class="impact-label">Metric 1</span>
-                                            </div>
-                                            <div class="impact-card">
-                                                <span class="impact-number">--</span>
-                                                <span class="impact-label">Metric 2</span>
-                                            </div>
-                                            <div class="impact-card">
-                                                <span class="impact-number">--</span>
-                                                <span class="impact-label">Metric 3</span>
-                                            </div>
-                                        </div>
+                                        <ul class="role-list">
+                                            <li>Delivered a fully functional, <strong>production-ready iOS application</strong> from scratch</li>
+                                            <li>Reduced outfit decision time for users through <strong>AI-powered recommendations</strong> based on their actual wardrobe</li>
+                                            <li>Created a <strong>seamless user experience</strong> combining complex AI operations with intuitive mobile UX</li>
+                                            <li>Built a monetization model enabling <strong>sustainable token-based revenue generation</strong></li>
+                                            <li>Established <strong>scalable architecture</strong> capable of handling user growth with serverless cloud functions</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Section 3: Tech Stack Table -->
                             <div class="project-section project-tech-stack">
-                                <h3 class="section-title">Tech Stack</h3>
+                                <h3 class="section-title">Tools & Technologies</h3>
                                 
                                 <table class="tech-table">
                                     <thead>
@@ -318,24 +324,76 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="tech-category">AI & ML</td>
-                                            <td class="tech-items">Google Gemini 2.5 Flash, Google Lens, SerpApi</td>
+                                            <td class="tech-category">Mobile Development</td>
+                                            <td class="tech-items">Swift, SwiftUI, UIKit, Xcode</td>
                                         </tr>
                                         <tr>
-                                            <td class="tech-category">iOS Development</td>
-                                            <td class="tech-items">SwiftUI, StoreKit 2, PhotosUI, Combine, MVVM</td>
+                                            <td class="tech-category">AI & Machine Learning</td>
+                                            <td class="tech-items">OpenAI GPT-4o-mini (image classification & text analysis), OpenAI gpt-image-1 (image generation), Apple Vision Framework, CoreML</td>
                                         </tr>
                                         <tr>
                                             <td class="tech-category">Backend & Cloud</td>
-                                            <td class="tech-items">Firebase (Auth, Firestore, Storage, Cloud Functions), GCP</td>
+                                            <td class="tech-items">Firebase (Authentication, Firestore, Storage, Cloud Functions, Analytics, Cloud Messaging, App Check), Node.js</td>
                                         </tr>
                                         <tr>
-                                            <td class="tech-category">Product & Design</td>
-                                            <td class="tech-items">JIRA, Figma, TestFlight, App Store Connect, RevenueCat</td>
+                                            <td class="tech-category">Authentication</td>
+                                            <td class="tech-items">Firebase Auth, Google Sign-In SDK, Apple Sign-In (AuthenticationServices), CryptoKit</td>
                                         </tr>
                                         <tr>
-                                            <td class="tech-category">Methodologies</td>
-                                            <td class="tech-items">Agile/Scrum, A/B Testing, User Acceptance Testing</td>
+                                            <td class="tech-category">APIs & Integrations</td>
+                                            <td class="tech-items">OpenAI API, OpenWeatherMap API, Apple App Store Connect (receipt validation)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Payments & Monetization</td>
+                                            <td class="tech-items">StoreKit 2 (In-App Purchases)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Reactive Programming</td>
+                                            <td class="tech-items">Combine Framework</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Push Notifications</td>
+                                            <td class="tech-items">Firebase Cloud Messaging (FCM), UserNotifications Framework</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Image Processing</td>
+                                            <td class="tech-items">Vision Framework, Firebase Storage, Custom Image Optimization</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Location Services</td>
+                                            <td class="tech-items">CoreLocation, OpenWeatherMap</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Email Services</td>
+                                            <td class="tech-items">Nodemailer (Cloud Functions)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Project Management</td>
+                                            <td class="tech-items">Jira, Trello</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Documentation & Collaboration</td>
+                                            <td class="tech-items">Notion, Google Docs</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">UI/UX Design</td>
+                                            <td class="tech-items">Figma, Canva</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Version Control</td>
+                                            <td class="tech-items">Git, GitHub</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Package Management</td>
+                                            <td class="tech-items">Swift Package Manager, npm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Analytics</td>
+                                            <td class="tech-items">Firebase Analytics, AppTrackingTransparency</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Other iOS Frameworks</td>
+                                            <td class="tech-items">PhotosUI, StoreKit, Security</td>
                                         </tr>
                                     </tbody>
                                 </table>

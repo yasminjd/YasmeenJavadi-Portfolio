@@ -5,8 +5,9 @@ import { app, analytics, storage, ref, getDownloadURL } from './firebase.js';
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔥 Firebase connected:', app.name);
 
-    // Load STYA V1 demo video from Firebase Storage
+    // Load STYA demo videos from Firebase Storage
     loadSTYAV1Video();
+    loadSTYAV2Video();
 
     // Add animation delays to elements for staggered loading
     const animatedElements = document.querySelectorAll('.content-card, .timeline-item, .project-card, .certificate-card');
@@ -401,6 +402,34 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loadingElement) loadingElement.style.display = 'none';
             
             console.log('✅ STYA V1 video loaded from Firebase Storage');
+        } catch (error) {
+            console.error('❌ Error loading video:', error);
+            if (loadingElement) {
+                loadingElement.innerHTML = `
+                    <span>📱</span>
+                    <p>Video unavailable</p>
+                `;
+            }
+        }
+    }
+
+    // Function to load STYA V2 video from Firebase Storage
+    async function loadSTYAV2Video() {
+        const videoElement = document.getElementById('stya-v2-video');
+        const loadingElement = document.querySelector('#stya-v2-video-container .video-loading');
+        
+        if (!videoElement) return; // Not on projects page
+        
+        try {
+            // STYA V2 demo video path in Firebase Storage
+            const videoRef = ref(storage, 'copy_82D740F0-0A85-477E-B2AB-CF991EBB08EC.MOV');
+            const videoURL = await getDownloadURL(videoRef);
+            
+            videoElement.src = videoURL;
+            videoElement.style.display = 'block';
+            if (loadingElement) loadingElement.style.display = 'none';
+            
+            console.log('✅ STYA V2 video loaded from Firebase Storage');
         } catch (error) {
             console.error('❌ Error loading video:', error);
             if (loadingElement) {
