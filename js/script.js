@@ -1,5 +1,12 @@
+// Import Firebase (initializes on load)
+import { app, analytics, storage, ref, getDownloadURL } from './firebase.js';
+
 // Modern portfolio functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔥 Firebase connected:', app.name);
+
+    // Load STYA V1 demo video from Firebase Storage
+    loadSTYAV1Video();
 
     // Add animation delays to elements for staggered loading
     const animatedElements = document.querySelectorAll('.content-card, .timeline-item, .project-card, .certificate-card');
@@ -171,26 +178,113 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Projects page functionality
-    const projectItems = document.querySelectorAll('.project-item');
+    // Projects Card Gallery functionality
+    const carouselCards = document.querySelectorAll('.carousel-card');
+    const projectsCarousel = document.querySelector('.projects-carousel');
+    const projectsContent = document.querySelector('.projects-content');
     const projectDetails = document.querySelectorAll('.project-detail');
+    const backToProjectsBtn = document.getElementById('backToProjects');
     
-    if (projectItems.length > 0) {
-        projectItems.forEach(item => {
-            item.addEventListener('click', function() {
+    // Function to expand project view
+    function expandProject(projectName) {
+        // Hide the card gallery
+        if (projectsCarousel) {
+            projectsCarousel.style.display = 'none';
+        }
+        
+        // Show the projects content area
+        if (projectsContent) {
+            projectsContent.classList.add('expanded');
+        }
+        
+        // Show the selected project
+        projectDetails.forEach(detail => detail.classList.remove('active'));
+        const targetDetail = document.getElementById(`project-${projectName}`);
+        if (targetDetail) {
+            targetDetail.classList.add('active');
+        }
+        
+        // Scroll to top of content
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Function to collapse back to card gallery
+    function collapseToGallery() {
+        // Hide the projects content area
+        if (projectsContent) {
+            projectsContent.classList.remove('expanded');
+        }
+        
+        // Show the card gallery
+        if (projectsCarousel) {
+            projectsCarousel.style.display = 'flex';
+        }
+        
+        // Clear active project
+        projectDetails.forEach(detail => detail.classList.remove('active'));
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Card click handlers - expand to project view
+    if (carouselCards.length > 0) {
+        carouselCards.forEach(card => {
+            card.addEventListener('click', function() {
                 const project = this.getAttribute('data-project');
+                expandProject(project);
+            });
+        });
+    }
+    
+    // Back button handler
+    if (backToProjectsBtn) {
+        backToProjectsBtn.addEventListener('click', function() {
+            collapseToGallery();
+        });
+    }
+
+    // Version Selector functionality (for STYA project)
+    const versionCards = document.querySelectorAll('.version-card');
+    
+    if (versionCards.length > 0) {
+        versionCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const version = this.getAttribute('data-version');
+                const parentProject = this.closest('.project-detail');
                 
-                // Remove active class from all items and details
-                projectItems.forEach(item => item.classList.remove('active'));
-                projectDetails.forEach(detail => detail.classList.remove('active'));
+                if (!parentProject) return;
                 
-                // Add active class to clicked item
+                // Get all version cards and contents within this project
+                const projectVersionCards = parentProject.querySelectorAll('.version-card');
+                const projectVersionContents = parentProject.querySelectorAll('.version-content');
+                
+                // Remove active class from all cards and contents
+                projectVersionCards.forEach(c => {
+                    c.classList.remove('active');
+                    const status = c.querySelector('.version-status');
+                    if (status) {
+                        status.innerHTML = '<span class="status-dot"></span>Click to explore';
+                    }
+                });
+                projectVersionContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked card
                 this.classList.add('active');
+                const thisStatus = this.querySelector('.version-status');
+                if (thisStatus) {
+                    thisStatus.innerHTML = '<span class="status-dot"></span>Selected';
+                }
                 
-                // Show corresponding project detail
-                const targetDetail = document.getElementById(`project-${project}`);
-                if (targetDetail) {
-                    targetDetail.classList.add('active');
+                // Show corresponding version content
+                const targetContent = parentProject.querySelector(`.version-content[data-version="${version}"]`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                    
+                    // Smooth scroll to content
+                    setTimeout(() => {
+                        targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
                 }
             });
         });
@@ -289,6 +383,34 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
+
+    // Function to load STYA V1 video from Firebase Storage
+    async function loadSTYAV1Video() {
+        const videoElement = document.getElementById('stya-v1-video');
+        const loadingElement = document.querySelector('#stya-v1-video-container .video-loading');
+        
+        if (!videoElement) return; // Not on projects page
+        
+        try {
+            // STYA V1 demo video path in Firebase Storage
+            const videoRef = ref(storage, 'copy_5A734217-640E-4BF9-93A9-86915B8A3D69.MOV');
+            const videoURL = await getDownloadURL(videoRef);
+            
+            videoElement.src = videoURL;
+            videoElement.style.display = 'block';
+            if (loadingElement) loadingElement.style.display = 'none';
+            
+            console.log('✅ STYA V1 video loaded from Firebase Storage');
+        } catch (error) {
+            console.error('❌ Error loading video:', error);
+            if (loadingElement) {
+                loadingElement.innerHTML = `
+                    <span>📱</span>
+                    <p>Video unavailable</p>
+                `;
+            }
+        }
+    }
 
     // Resume Modal Functionality
     const resumeBtn = document.getElementById('resumeBtn');

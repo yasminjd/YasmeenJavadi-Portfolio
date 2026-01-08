@@ -33,250 +33,627 @@
                 <h1 class="page-title">Projects.</h1>
             </header>
 
-            <div class="projects-container">
-                <div class="projects-sidebar">
-                    <div class="project-item active" data-project="stya">
-                        <span class="project-name">Stya – AI Fashion Stylist</span>
+            <div class="projects-container carousel-layout">
+                <!-- Project Carousel -->
+                <div class="projects-carousel">
+                    <button class="carousel-arrow carousel-prev" aria-label="Previous project">
+                        <span>‹</span>
+                    </button>
+                    
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-card active" data-project="stya">
+                                <div class="carousel-card-icon">📱</div>
+                                <h3 class="carousel-card-title">STYA</h3>
+                                <p class="carousel-card-subtitle">iOS Fashion App</p>
+                                <span class="carousel-card-tag">AI + Mobile</span>
+                            </div>
+                            <div class="carousel-card" data-project="lawtimepro">
+                                <div class="carousel-card-icon">⚖️</div>
+                                <h3 class="carousel-card-title">LawTimePro</h3>
+                                <p class="carousel-card-subtitle">Legal Automation</p>
+                                <span class="carousel-card-tag">AI + Web</span>
+                            </div>
+                            <div class="carousel-card" data-project="rocket">
+                                <div class="carousel-card-icon">🚀</div>
+                                <h3 class="carousel-card-title">Rocket</h3>
+                                <p class="carousel-card-subtitle">AI Resume Builder</p>
+                                <span class="carousel-card-tag">Full-Stack</span>
+                            </div>
+                            <div class="carousel-card" data-project="itsupport">
+                                <div class="carousel-card-icon">🤖</div>
+                                <h3 class="carousel-card-title">IT Support Agent</h3>
+                                <p class="carousel-card-subtitle">Enterprise Healthcare</p>
+                                <span class="carousel-card-tag">AWS Cloud</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-item" data-project="lawtimepro">
-                        <span class="project-name">LawTimePro – Legal Automation</span>
-                    </div>
-                    <div class="project-item" data-project="rocket">
-                        <span class="project-name">Rocket – AI Resume Builder</span>
-                    </div>
-                    <div class="project-item" data-project="itsupport">
-                        <span class="project-name">Enterprise IT Support Agent</span>
-                    </div>
+                    
+                    <button class="carousel-arrow carousel-next" aria-label="Next project">
+                        <span>›</span>
+                    </button>
+                </div>
+                
+                <!-- Carousel Dots -->
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" data-index="0" aria-label="Go to project 1"></button>
+                    <button class="carousel-dot" data-index="1" aria-label="Go to project 2"></button>
+                    <button class="carousel-dot" data-index="2" aria-label="Go to project 3"></button>
+                    <button class="carousel-dot" data-index="3" aria-label="Go to project 4"></button>
                 </div>
 
                 <div class="projects-content">
-                    <div id="project-stya" class="project-detail active">
-                        <h2 class="project-title">Stya <span class="tech-highlight">Interim Product Manager</span></h2>
-                        <p class="project-duration">Newark, NJ • July 2025 – December 2025</p>
-                        <p class="project-url"><a href="https://stya.ai" target="_blank">https://stya.ai</a></p>
-                        <p class="project-url"><a href="https://apps.apple.com/us/app/stya/id6745906113" target="_blank">Download on App Store</a></p>
-                        
-                        <div class="project-features">
-                            <h3 class="section-subtitle">Core Responsibilities</h3>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Defined product requirements and led development of an iOS application leveraging generative AI through Google's Gemini 2.5 Flash model for photorealistic virtual try-on experiences, reducing the gap between style inspiration and purchase in fashion e-commerce.</p>
+                    <button class="back-to-projects" id="backToProjects">
+                        <span>←</span> Back to Projects
+                    </button>
+                    
+                    <div id="project-stya" class="project-detail">
+                        <!-- Project Header -->
+                        <div class="project-header-intro">
+                            <h2 class="project-title">STYA iOS Fashion App</h2>
+                            <p class="project-tagline">AI-Powered Virtual Try-On & Style Discovery</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://stya.ai" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">🌐</span> stya.ai
+                                </a>
+                                <a href="https://apps.apple.com/us/app/stya/id6745906113" target="_blank" class="project-link-pill app-store">
+                                    <span class="link-icon"></span> App Store
+                                </a>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Architected the complete end-to-end user flow beginning with full-body image upload, followed by natural language style prompting, then AI image generation, integrated with Google Lens visual search, and concluding with a shoppable product carousel featuring retailer deep links and real-time pricing.</p>
+                        </div>
+
+                        <!-- Version Selector -->
+                        <div class="version-selector">
+                            <h3 class="version-selector-title">Select Version to Explore</h3>
+                            <div class="version-cards">
+                                <div class="version-card" data-version="v1">
+                                    <div class="version-badge">V1</div>
+                                    <h4 class="version-name">Version 1</h4>
+                                    <p class="version-tagline"><!-- PLACEHOLDER: e.g., "MVP Release" --></p>
+                                    <span class="version-status">
+                                        <span class="status-dot"></span>
+                                        Click to explore
+                                    </span>
+                                </div>
+                                <div class="version-card" data-version="v2">
+                                    <div class="version-badge">V2</div>
+                                    <h4 class="version-name">Version 2</h4>
+                                    <p class="version-tagline"><!-- PLACEHOLDER: e.g., "Production App" --></p>
+                                    <span class="version-status">
+                                        <span class="status-dot"></span>
+                                        Click to explore
+                                    </span>
+                                </div>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Optimized the AI inference pipeline by collaborating with engineering to reduce average session latency by 1.8× while improving style-matching accuracy by 40% through iterative prompt engineering, image preprocessing techniques, and API request batching strategies.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Designed the Firebase-based cloud architecture encompassing multi-provider authentication supporting email and password, Apple Sign-In, Google Sign-In, and phone OTP verification, along with Firestore document modeling for user profiles and subscription state, Firebase Storage for secure image assets, and Cloud Functions for serverless API orchestration.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Implemented a tiered subscription monetization model featuring usage-based generation limits with free users receiving 30 generations per day and premium users receiving unlimited access, while defining StoreKit integration requirements and RevenueCat analytics instrumentation to track monthly recurring revenue, churn rates, and conversion funnels.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Conducted user acceptance testing with over 500 beta users, synthesizing qualitative feedback and quantitative usage data into prioritized backlog items and achieving a 95% satisfaction rating through continuous iteration on UX flows and AI output quality.</p>
+                        </div>
+
+                        <!-- VERSION 1 CONTENT -->
+                        <div class="version-content" data-version="v1">
+                            <!-- Section 1: App Overview -->
+                            <div class="project-section project-overview">
+                                <div class="app-showcase">
+                                    <div class="app-showcase-video">
+                                        <div class="video-container" id="stya-v1-video-container">
+                                            <div class="video-loading">
+                                                <span class="loading-spinner"></span>
+                                                <p>Loading demo video...</p>
+                                            </div>
+                                            <video id="stya-v1-video" controls playsinline class="project-video portrait" style="display: none;">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                    <div class="app-showcase-description">
+                                        <h3 class="app-description-title">About the App</h3>
+                                        <p class="app-description-text">
+                                            STYA is an AI-powered fashion styling app that allows users to upload their photo and virtually try on new clothing, accessories, hairstyles, and hair colors. Users can style complete outfits by adding items from a personal library, save their looks, and move seamlessly from inspiration to purchase. The app combines creative exploration with practical shopping, offering free starter tokens and flexible subscription plans.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <h3 class="section-subtitle">Technical Product Ownership</h3>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Wrote detailed technical specifications for the AI image manipulation service integrating Gemini 2.5 Flash multimodal capabilities, including prompt templates, reference photo handling, and response parsing logic for consistent style outputs.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Defined API contracts between the iOS client and Firebase Cloud Functions, specifying request and response schemas for the shopping recommendations endpoint powered by Google Lens via SerpApi, user authentication flows, and image upload endpoints.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Led the model selection and evaluation process by benchmarking Gemini 2.5 Flash against alternative models on accuracy, latency, cost per generation, and output consistency, then documented trade-offs for stakeholder decision-making.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Designed the product data model in Firestore including user profiles, subscription state management, generation tracking with daily limits and reset logic, and image URL storage with Firebase Storage security rules.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Established error handling and edge case requirements for authentication failures, network timeouts, AI generation failures, and empty product search results, ensuring graceful degradation and user-friendly error messaging throughout the application.</p>
+                            <!-- Section 2: My Role, Results & Impact -->
+                            <div class="project-section project-role">
+                                <h3 class="section-title">My Role & Contributions</h3>
+                                
+                                <div class="role-content">
+                                    <div class="role-position">
+                                        <span class="role-badge">Project Manager & Full Stack Software Engineer</span>
+                                    </div>
+
+                                    <div class="role-intro">
+                                        <p>As the Project Manager and Full Stack Software Engineer for STYA, I led the end-to-end development of an AI-powered iOS fashion styling application from concept to production.</p>
+                                    </div>
+
+                                    <div class="role-details">
+                                        <h4>Key Contributions</h4>
+                                        <ul class="role-list">
+                                            <li><strong>Full-Stack Architecture</strong> — Designed and implemented the complete technical stack, from the native iOS frontend using Swift and SwiftUI, to serverless backend infrastructure powered by Firebase Cloud Functions.</li>
+                                            <li><strong>AI Integration</strong> — Engineered the core AI pipeline integrating Google Gemini 2.5 Flash for intelligent style transformations and SerpApi for visual product search, enabling users to discover shoppable fashion items from AI-generated looks.</li>
+                                            <li><strong>Performance Optimization</strong> — Optimized asynchronous processing workflows across the backend, achieving a 1.8× reduction in latency for AI-powered features.</li>
+                                            <li><strong>Monetization System</strong> — Built a complete in-app subscription system using StoreKit 2, implementing secure transaction verification, purchase restoration, and tiered access control across three subscription plans.</li>
+                                            <li><strong>User Experience</strong> — Designed and shipped all user-facing features including the chat interface, product carousel with Safari integration, onboarding flow, and paywall — achieving 95% user satisfaction.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="role-results">
+                                        <h4>Results & Impact</h4>
+                                        <div class="impact-grid">
+                                            <div class="impact-card">
+                                                <span class="impact-number">500+</span>
+                                                <span class="impact-label">Production Users</span>
+                                            </div>
+                                            <div class="impact-card">
+                                                <span class="impact-number">1.8×</span>
+                                                <span class="impact-label">Latency Reduction</span>
+                                            </div>
+                                            <div class="impact-card">
+                                                <span class="impact-number">95%</span>
+                                                <span class="impact-label">User Satisfaction</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <h3 class="section-subtitle">Cross-Functional Leadership</h3>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Managed a 4-person cross-functional team consisting of an iOS engineer, backend engineer, designer, and ML specialist, facilitating daily standups, sprint planning sessions, and retrospectives using JIRA.</p>
+                            <!-- Section 3: Tech Stack Table -->
+                            <div class="project-section project-tech-stack">
+                                <h3 class="section-title">Tools & Technologies</h3>
+                                
+                                <table class="tech-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Technologies</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tech-category">Languages</td>
+                                            <td class="tech-items">Swift, JavaScript (Node.js)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">iOS Frameworks</td>
+                                            <td class="tech-items">SwiftUI, StoreKit 2, Safari Services</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Backend</td>
+                                            <td class="tech-items">Firebase Cloud Functions (Serverless)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Database & Storage</td>
+                                            <td class="tech-items">Firebase Firestore, Firebase Cloud Storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Authentication</td>
+                                            <td class="tech-items">Firebase Auth, Apple Sign-In</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">AI & APIs</td>
+                                            <td class="tech-items">Google Gemini 2.5 Flash, SerpApi</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Design Tools</td>
+                                            <td class="tech-items">Figma, Xcode Interface Builder</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Project Management</td>
+                                            <td class="tech-items">Jira, Notion, GitHub Projects</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">DevOps</td>
+                                            <td class="tech-items">Firebase Hosting, Cloud Functions Deployment</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Translated complex AI capabilities into user-facing features by collaborating with design to create intuitive prompt suggestions spanning dress styles, haircuts, accessories, and aesthetic categories that lowered the barrier to user engagement.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Delivered stakeholder demos that communicated technical value to non-technical audiences, including investor updates focused on AI differentiation and product-market fit validation.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p>Authored the privacy policy and App Store compliance documentation, ensuring adherence to GDPR, CCPA, and Apple App Store Review Guidelines for user data handling and AI-generated content.</p>
+                        </div>
+
+                        <!-- VERSION 2 CONTENT -->
+                        <div class="version-content" data-version="v2">
+                            <!-- Section 1: App Overview -->
+                            <div class="project-section project-overview">
+                                <div class="project-description">
+                                    <p><!-- PLACEHOLDER: V2 app description paragraph --></p>
+                                </div>
+
+                                <div class="project-media-gallery">
+                                    <div class="media-placeholder">
+                                        <span>📱</span>
+                                        <p>Version 2 media coming soon</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <h3 class="section-subtitle">Key Technical Decisions Made</h3>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>AI Model:</strong> Gemini 2.5 Flash. Best balance of multimodal capability, latency, and cost for image-to-image transformation.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Product Search:</strong> Google Lens via SerpApi. Visual search accuracy superior to text-based alternatives with real retailer inventory.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Auth Provider:</strong> Firebase Auth. Multi-provider support including Apple, Google, phone, and email with minimal custom backend.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Database:</strong> Firestore. Real-time sync, offline support, and seamless iOS SDK integration.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Image Storage:</strong> Firebase Storage. Security rules, CDN delivery, and direct upload from iOS client.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Subscription:</strong> StoreKit 2 with RevenueCat. Native iOS purchase flow with cross-platform analytics.</p>
+                            <!-- Section 2: My Role, Results & Impact -->
+                            <div class="project-section project-role">
+                                <h3 class="section-title">My Role & Contributions</h3>
+                                
+                                <div class="role-content">
+                                    <div class="role-position">
+                                        <span class="role-badge"><!-- PLACEHOLDER: V2 Role --></span>
+                                        <span class="role-duration"><!-- PLACEHOLDER: V2 Duration --></span>
+                                    </div>
+
+                                    <div class="role-details">
+                                        <h4>What I Did</h4>
+                                        <ul class="role-list">
+                                            <li><!-- V2 Responsibility 1 --></li>
+                                            <li><!-- V2 Responsibility 2 --></li>
+                                            <li><!-- V2 Responsibility 3 --></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="role-results">
+                                        <h4>Results & Impact</h4>
+                                        <div class="impact-grid">
+                                            <div class="impact-card">
+                                                <span class="impact-number">--</span>
+                                                <span class="impact-label">Metric 1</span>
+                                            </div>
+                                            <div class="impact-card">
+                                                <span class="impact-number">--</span>
+                                                <span class="impact-label">Metric 2</span>
+                                            </div>
+                                            <div class="impact-card">
+                                                <span class="impact-number">--</span>
+                                                <span class="impact-label">Metric 3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <h3 class="section-subtitle">Technologies & Tools</h3>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>AI and Machine Learning:</strong> Google Gemini 2.5 Flash for multimodal generation, Google Lens for visual search, SerpApi for product data, and prompt engineering techniques.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Cloud Infrastructure:</strong> Firebase including Authentication, Firestore, Storage, and Cloud Functions, hosted on Google Cloud Platform.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>iOS Development:</strong> SwiftUI, StoreKit 2, PhotosUI, async/await concurrency, Combine framework, and MVVM architecture.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Product Tools:</strong> JIRA for project management, Figma for design collaboration, TestFlight for beta distribution, App Store Connect for releases, and RevenueCat for subscription analytics.</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Methodologies:</strong> Agile and Scrum practices, continuous discovery, user acceptance testing, and A/B testing.</p>
+                            <!-- Section 3: Tech Stack Table -->
+                            <div class="project-section project-tech-stack">
+                                <h3 class="section-title">Tech Stack</h3>
+                                
+                                <table class="tech-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Technologies</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tech-category">AI & ML</td>
+                                            <td class="tech-items">Google Gemini 2.5 Flash, Google Lens, SerpApi</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">iOS Development</td>
+                                            <td class="tech-items">SwiftUI, StoreKit 2, PhotosUI, Combine, MVVM</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Backend & Cloud</td>
+                                            <td class="tech-items">Firebase (Auth, Firestore, Storage, Cloud Functions), GCP</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Product & Design</td>
+                                            <td class="tech-items">JIRA, Figma, TestFlight, App Store Connect, RevenueCat</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Methodologies</td>
+                                            <td class="tech-items">Agile/Scrum, A/B Testing, User Acceptance Testing</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
                     </div>
 
                     <div id="project-lawtimepro" class="project-detail">
-                        <h2 class="project-title">LawTime-Pro – Legal Productivity & Billing Automation <span class="tech-highlight">In Progress</span></h2>
-                        <p class="project-duration">Collaborative Project • May 2025</p>
-                        
-                        <div class="project-features">
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Summary:</strong> LawTime-Pro is an AI-powered productivity and billing automation platform designed for law firms. It captures screen activity at regular intervals, applies OCR to extract on-screen content, and uses GPT-4 to categorize tasks into billable and non-billable work based on firm-specific guidelines. A real-time dashboard provides legal teams with detailed insights and reporting to support more accurate billing, compliance, and performance tracking. This project is currently in active development and being expanded as part of a two-person collaboration.</p>
+                        <!-- Section 1: App Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">LawTimePro</h2>
+                            <p class="project-tagline">AI-Powered Legal Productivity & Billing Automation</p>
+                            
+                            <div class="project-links-header">
+                                <span class="project-link-pill status-badge">
+                                    <span class="link-icon">🚧</span> In Progress
+                                </span>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>My Role: Co-Developer & AI Integration Lead:</strong> As part of a two-person development team, I contributed to the architecture, backend, AI integration, and dashboard functionality: AI Integration: Led the implementation of GPT-4 for intelligent activity classification. Screen Monitoring & OCR: Built the automated screen capture system and OCR pipeline. Guideline Engine: Developed a billing rule upload and parsing system to customize classification logic per firm. Dashboard: Co-developed a real-time React dashboard for tracking and visualizing activity. Backend: Helped build the FastAPI backend, design RESTful endpoints, and configure processing schedules.</p>
+
+                            <div class="project-description">
+                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Tech Stack:</strong><br/>
-                                • <strong>Backend:</strong> FastAPI (Python), Uvicorn, Tesseract OCR, OpenAI GPT-4<br/>
-                                • <strong>Frontend:</strong> React 18, Axios, Recharts, date-fns, React Datepicker<br/>
-                                • <strong>Data Handling:</strong> JSON-based logging, support for DOCX, TXT, PDF, and Markdown<br/>
-                                • <strong>System Design:</strong> 30-second screen capture, 5-minute batch GPT analysis, real-time dashboard updates</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Key Features (In Progress):</strong> Automated screen capture and text extraction using OCR, GPT-4-based activity classification engine, Uploadable billing guidelines for firm-specific categorization, Real-time activity dashboard with billable vs non-billable breakdown, PDF/DOCX export and report generation (planned)</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Objectives:</strong> Automate legal time tracking to eliminate manual entry, increase billing accuracy by enforcing custom rules, improve productivity visibility across legal teams, provide a scalable and modular platform for law firms, and ensure secure, efficient, and user-friendly performance monitoring</p>
+
+                            <div class="project-media-gallery">
+                                <div class="media-placeholder">
+                                    <span>⚖️</span>
+                                    <p>Media content coming soon</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Section 2: My Role, Results & Impact -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Co-Developer & AI Integration Lead</span>
+                                    <span class="role-duration">May 2025 • Collaborative Project</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>What I Did</h4>
+                                    <ul class="role-list">
+                                        <!-- PLACEHOLDER: Add your responsibilities here -->
+                                        <li><!-- Responsibility 1 --></li>
+                                        <li><!-- Responsibility 2 --></li>
+                                        <li><!-- Responsibility 3 --></li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Results & Impact</h4>
+                                    <div class="impact-grid">
+                                        <!-- PLACEHOLDER: Add your impact metrics here -->
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 1</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 2</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tech Stack</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">AI & ML</td>
+                                        <td class="tech-items">OpenAI GPT-4, Tesseract OCR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">FastAPI (Python), Uvicorn</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">React 18, Axios, Recharts, date-fns, React Datepicker</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Handling</td>
+                                        <td class="tech-items">JSON logging, DOCX/TXT/PDF/Markdown parsing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">System Design</td>
+                                        <td class="tech-items">30s screen capture, 5-min batch analysis, real-time updates</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
                     <div id="project-rocket" class="project-detail">
-                        <h2 class="project-title">Rocket – AI-Powered Resume Builder <span class="tech-highlight">Full-Stack Application</span></h2>
-                        <p class="project-duration">Personal Project • February 2025</p>
-                        <p class="project-url"><a href="https://resume-webapp-896b9.firebaseapp.com" target="_blank">https://resume-webapp-896b9.firebaseapp.com</a></p>
-                        
-                        <div class="project-features">
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Summary:</strong> Rocket is a full-stack web application that automates the resume-building process using AI and LaTeX. Users can upload their existing resume or start from scratch, and the system intelligently parses, tailors, and compiles job-ready resumes using professional templates. The project was designed to eliminate the repetitive, time-consuming task of customizing resumes for each job. By combining GPT-4 with structured templates, Rocket significantly reduces resume creation time while improving quality and personalization.</p>
+                        <!-- Section 1: App Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Rocket</h2>
+                            <p class="project-tagline">AI-Powered Resume Builder & Job Application Assistant</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://resume-webapp-896b9.firebaseapp.com" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">🚀</span> Live Demo
+                                </a>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>My Role: Full-Stack Contributor:</strong> I contributed to both backend and frontend development, with responsibilities including: Backend: Built RESTful API endpoints in Express.js with TypeScript, integrated GPT-4 for resume parsing and generation, and set up Firebase Firestore for data management. Authentication: Implemented secure login with Firebase Auth (OAuth and email/password). File Handling: Developed PDF/DOCX parsing and LaTeX compilation systems. Frontend: Built UI with React and TailwindCSS, including PDF preview and a multi-step resume builder. Deployment: Deployed the backend to Heroku and hosted the frontend on Firebase.</p>
+
+                            <div class="project-description">
+                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Tech Stack:</strong><br/>
-                                • <strong>Frontend:</strong> React, TailwindCSS, Vite, React Router, PDF.js, Axios, Firebase Hooks<br/>
-                                • <strong>Backend:</strong> Express.js, TypeScript, OpenAI API, Firebase Admin SDK, Multer, PDFLaTeX, docx<br/>
-                                • <strong>Infrastructure:</strong> Firebase Firestore, Firebase Authentication, Firebase Storage, Firebase Hosting, Heroku<br/>
-                                • <strong>AI:</strong> GPT-4 for resume parsing, content generation, and job-specific tailoring<br/>
-                                • <strong>Development Tools:</strong> Jest, Supertest, Git, ESLint, npm</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Key Features:</strong> Resume parsing with >95% accuracy, AI-generated content tailored to job descriptions, Multiple export formats (PDF, DOCX), Professional LaTeX-based templates, Resume and job description version management, Secure user authentication, Cover letter generation</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Outcomes:</strong> Reduced resume creation time from hours to under 30 seconds, Improved formatting quality and ATS compatibility through LaTeX, Real-time database sync and scalable backend, Clean, responsive user interface with modern UX best practices</p>
+
+                            <div class="project-media-gallery">
+                                <div class="media-placeholder">
+                                    <span>📄</span>
+                                    <p>Media content coming soon</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Section 2: My Role, Results & Impact -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Full-Stack Developer</span>
+                                    <span class="role-duration">February 2025 • Personal Project</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>What I Did</h4>
+                                    <ul class="role-list">
+                                        <!-- PLACEHOLDER: Add your responsibilities here -->
+                                        <li><!-- Responsibility 1 --></li>
+                                        <li><!-- Responsibility 2 --></li>
+                                        <li><!-- Responsibility 3 --></li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Results & Impact</h4>
+                                    <div class="impact-grid">
+                                        <!-- PLACEHOLDER: Add your impact metrics here -->
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 1</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 2</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tech Stack</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">AI & ML</td>
+                                        <td class="tech-items">OpenAI GPT-4 (parsing, generation, tailoring)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">React, TailwindCSS, Vite, React Router, PDF.js, Axios</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">Express.js, TypeScript, Multer, PDFLaTeX</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Infrastructure</td>
+                                        <td class="tech-items">Firebase (Auth, Firestore, Storage, Hosting), Heroku</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Dev Tools</td>
+                                        <td class="tech-items">Jest, Supertest, Git, ESLint, npm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
                     <div id="project-itsupport" class="project-detail">
-                        <h2 class="project-title">Enterprise IT Support Agent – AI-Powered Healthcare POC <span class="tech-highlight">AWS Cloud Architecture</span></h2>
-                        <p class="project-duration">Professional Project • 2024</p>
-                        
-                        <div class="project-features">
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Summary:</strong> Developed a proof-of-concept AI-powered IT support system for a healthcare organization, designed to handle common support requests such as password resets, account unlocks, and troubleshooting guidance. The system supports multi-modal interaction through both voice (via Amazon Connect) and chat, leveraging LLMs, secure workflows, and a scalable, serverless infrastructure tailored for compliance-heavy environments.</p>
+                        <!-- Section 1: App Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Enterprise IT Support Agent</h2>
+                            <p class="project-tagline">AI-Powered Healthcare IT Support System on AWS</p>
+                            
+                            <div class="project-links-header">
+                                <span class="project-link-pill status-badge">
+                                    <span class="link-icon">🏥</span> Healthcare POC
+                                </span>
+                                <span class="project-link-pill">
+                                    <span class="link-icon">☁️</span> AWS Cloud
+                                </span>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>My Role: Solution Architect:</strong> As the Solution Architect, I was responsible for designing and implementing the system architecture and core components:<br/>
-                                • <strong>Architecture Design:</strong> Built the end-to-end cloud-native architecture using Amazon Connect, Lex V2, AWS Bedrock Agent (Claude 3 Haiku), Lambda, and S3<br/>
-                                • <strong>Multi-Modal Integration:</strong> Orchestrated a unified fulfillment flow for both voice and chat channels using the same logic across modalities<br/>
-                                • <strong>Conversational AI:</strong> Developed Lambda functions for intent classification and fulfillment, routing requests to knowledge base, account actions, or escalation paths<br/>
-                                • <strong>Identity Verification:</strong> Implemented secure mock authentication workflows for employee ID and email validation<br/>
-                                • <strong>Knowledge Base Search:</strong> Integrated over 10 technical documents using vector-based retrieval for natural language queries<br/>
-                                • <strong>Performance Testing:</strong> Designed and executed end-to-end test flows for latency, throughput, and fallback validation</p>
+
+                            <div class="project-description">
+                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
                             </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Tech Stack:</strong><br/>
-                                • <strong>Infrastructure:</strong> Amazon Connect (voice), Lex V2 (chat), AWS Bedrock Agent (Claude 3 Haiku), Lambda, S3, IAM, CloudFormation<br/>
-                                • <strong>Development Tools:</strong> Python, JSON, Git, AWS CLI<br/>
-                                • <strong>AI Components:</strong> Bedrock agent orchestration, document embedding for retrieval<br/>
-                                • <strong>Security & Compliance:</strong> HIPAA-ready AWS architecture, scoped IAM roles, and serverless isolation</p>
-                            </div>
-                            <div class="feature">
-                                <span class="checkmark">✓</span>
-                                <p><strong>Key Outcomes:</strong><br/>
-                                • <strong>Multi-Modal Capability:</strong> Seamless support via both voice and chat with unified logic<br/>
-                                • <strong>Low Latency:</strong> Achieved 200–500ms average response time under load<br/>
-                                • <strong>Scalability:</strong> Supported 1,000+ concurrent users across channels<br/>
-                                • <strong>Automation Impact:</strong> Successfully automated password reset and unlock flows<br/>
-                                • <strong>Production Readiness:</strong> Roadmap defined for LDAP integration, improved monitoring, and broader system connectivity</p>
+
+                            <div class="project-media-gallery">
+                                <div class="media-placeholder">
+                                    <span>🤖</span>
+                                    <p>Media content coming soon</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Section 2: My Role, Results & Impact -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Solution Architect</span>
+                                    <span class="role-duration">2024 • Professional Project</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>What I Did</h4>
+                                    <ul class="role-list">
+                                        <!-- PLACEHOLDER: Add your responsibilities here -->
+                                        <li><!-- Responsibility 1 --></li>
+                                        <li><!-- Responsibility 2 --></li>
+                                        <li><!-- Responsibility 3 --></li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Results & Impact</h4>
+                                    <div class="impact-grid">
+                                        <!-- PLACEHOLDER: Add your impact metrics here -->
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 1</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 2</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">--</span>
+                                            <span class="impact-label">Metric 3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tech Stack</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">AI & ML</td>
+                                        <td class="tech-items">AWS Bedrock Agent (Claude 3 Haiku), Document Embedding</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AWS Infrastructure</td>
+                                        <td class="tech-items">Amazon Connect, Lex V2, Lambda, S3, IAM, CloudFormation</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development</td>
+                                        <td class="tech-items">Python, JSON, Git, AWS CLI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Security</td>
+                                        <td class="tech-items">HIPAA-ready architecture, Scoped IAM roles, Serverless isolation</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Channels</td>
+                                        <td class="tech-items">Voice (Amazon Connect), Chat (Lex V2), Multi-modal integration</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
             </div>
