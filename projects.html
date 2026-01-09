@@ -66,6 +66,18 @@
                                 <p class="carousel-card-subtitle">Enterprise Healthcare</p>
                                 <span class="carousel-card-tag">AWS Cloud</span>
                             </div>
+                            <div class="carousel-card" data-project="obesity-ml">
+                                <div class="carousel-card-icon">📊</div>
+                                <h3 class="carousel-card-title">Obesity Prediction</h3>
+                                <p class="carousel-card-subtitle">ML Classification</p>
+                                <span class="carousel-card-tag">Machine Learning</span>
+                            </div>
+                            <div class="carousel-card" data-project="steampulse">
+                                <div class="carousel-card-icon">📈</div>
+                                <h3 class="carousel-card-title">SteamPulse</h3>
+                                <p class="carousel-card-subtitle">Stock Prediction</p>
+                                <span class="carousel-card-tag">ML + Finance</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -80,6 +92,8 @@
                     <button class="carousel-dot" data-index="1" aria-label="Go to project 2"></button>
                     <button class="carousel-dot" data-index="2" aria-label="Go to project 3"></button>
                     <button class="carousel-dot" data-index="3" aria-label="Go to project 4"></button>
+                    <button class="carousel-dot" data-index="4" aria-label="Go to project 5"></button>
+                    <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
                 </div>
 
                 <div class="projects-content">
@@ -799,6 +813,322 @@
                                     <tr>
                                         <td class="tech-category">Channels</td>
                                         <td class="tech-items">Voice (Amazon Connect), Chat (Lex V2), Multi-modal integration</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="project-obesity-ml" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Obesity Level Prediction</h2>
+                            <p class="project-tagline">Multi-Class Classification Using Machine Learning</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📊</span> UCI ML Repository
+                                </a>
+                                <a href="https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">🔗</span> Kaggle Dataset
+                                </a>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    Developed a multi-class classification system to predict obesity levels in individuals based on lifestyle habits and physical attributes. The model achieves 95% accuracy and can classify individuals into 7 distinct weight categories, from underweight to severe obesity. Obesity is a global health concern linked to chronic diseases — this project leverages machine learning to identify obesity risk levels early, enabling proactive health interventions based on easily measurable lifestyle factors.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Dataset & Methodology -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Dataset & Methodology</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">UCI Machine Learning Repository</span>
+                                    <span class="role-duration">2,111 Records • 17 Features</span>
+                                </div>
+
+                                <div class="role-intro">
+                                    <p><strong>Features include:</strong> Age, Gender, Height, Weight, eating habits (vegetable consumption, high-calorie food intake), physical activity frequency, water intake, alcohol consumption, smoking status, transportation mode, and family history of overweight.</p>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Target Variable (7 Classes)</h4>
+                                    <p style="color: var(--accent); margin-bottom: 1.5rem;">Insufficient Weight | Normal Weight | Overweight Level I & II | Obesity Type I, II & III</p>
+                                    
+                                    <h4>Methodology</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Data Preprocessing</strong> — Verified data quality (no missing values), encoded categorical target variable using Label Encoding, applied StandardScaler for feature normalization</li>
+                                        <li><strong>Exploratory Data Analysis</strong> — Generated correlation heatmaps, identified key predictive features, created visualizations comparing obesity levels against weight, height, physical activity, and vegetable intake</li>
+                                        <li><strong>Feature Selection</strong> — Selected 4 high-impact features: Height, Weight, Physical Activity Frequency (FAF), and Vegetable Consumption (FCVC)</li>
+                                        <li><strong>Model Development</strong> — Trained and evaluated 4 classification algorithms with 80/20 train-test split</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Results -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Model Performance Results</h3>
+                            
+                            <div class="role-content">
+                                <table class="tech-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Model</th>
+                                            <th>Accuracy</th>
+                                            <th>F1-Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tech-category">Support Vector Machine (Linear)</td>
+                                            <td class="tech-items" style="color: var(--accent); font-weight: 600;">95.03%</td>
+                                            <td class="tech-items" style="color: var(--accent); font-weight: 600;">94.99%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Decision Tree</td>
+                                            <td class="tech-items">94.56%</td>
+                                            <td class="tech-items">94.54%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">Logistic Regression</td>
+                                            <td class="tech-items">88.89%</td>
+                                            <td class="tech-items">88.71%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tech-category">K-Nearest Neighbors</td>
+                                            <td class="tech-items">86.05%</td>
+                                            <td class="tech-items">86.05%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="role-details" style="margin-top: 2rem;">
+                                    <h4>Key Findings</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Best Performer</strong> — SVM with linear kernel outperformed all other models</li>
+                                        <li><strong>Feature Importance</strong> — Weight and Height showed the strongest correlation with obesity classification</li>
+                                        <li><strong>Activity Correlation</strong> — Physical activity frequency inversely correlates with obesity levels</li>
+                                        <li><strong>Interpretability</strong> — Decision Tree visualization revealed interpretable decision boundaries for clinical use</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Impact Metrics</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">95%</span>
+                                            <span class="impact-label">Model Accuracy</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">7</span>
+                                            <span class="impact-label">Obesity Classes</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">2,111</span>
+                                            <span class="impact-label">Training Records</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tools & Technologies</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Programming Language</td>
+                                        <td class="tech-items">Python 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Environment</td>
+                                        <td class="tech-items">Jupyter Notebook, Google Colab</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Manipulation</td>
+                                        <td class="tech-items">Pandas, NumPy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Visualization</td>
+                                        <td class="tech-items">Matplotlib, Seaborn</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Machine Learning</td>
+                                        <td class="tech-items">Scikit-learn</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">ML Algorithms</td>
+                                        <td class="tech-items">Logistic Regression, Support Vector Machine (SVM), K-Nearest Neighbors (KNN), Decision Tree</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Preprocessing</td>
+                                        <td class="tech-items">StandardScaler, LabelEncoder</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Model Evaluation</td>
+                                        <td class="tech-items">Accuracy Score, F1-Score, Confusion Matrix, Classification Report</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Tree Visualization</td>
+                                        <td class="tech-items">pydot, Graphviz</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Cloud Storage</td>
+                                        <td class="tech-items">Google Drive</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="project-steampulse" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">SteamPulse</h2>
+                            <p class="project-tagline">High-Frequency Trading Prediction & Backtesting Platform</p>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    A machine learning-powered web application that predicts stock market movements in high-frequency trading environments. The platform analyzes Tesla and Ford stock data (2018-2023) using technical indicators and sentiment analysis from financial news to forecast price directions and returns. Users can simulate trading strategies through an interactive backtesting interface—configuring investment amounts, durations, and visualizing predicted vs. actual returns in real-time. The app features SHAP-based explainability to show which market indicators most influence predictions, achieving 74.63% classification accuracy in predicting stock movement direction.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: My Role & Contributions -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Project Manager & Backend Developer & ML Engineer</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Key Contributions</h4>
+                                    <table class="tech-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Area</th>
+                                                <th>Contributions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tech-category">ML Model Development</td>
+                                                <td class="tech-items">Designed, trained, and tuned XGBoost models for both classification (price direction) and regression (log returns) using GridSearch and RandomSearch hyperparameter optimization</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tech-category">Feature Engineering</td>
+                                                <td class="tech-items">Computed technical indicators including RSI, MACD, Bollinger Bands, Moving Averages, and lagged returns to capture stock behavior patterns</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tech-category">Data Pipeline</td>
+                                                <td class="tech-items">Built preprocessing pipelines to handle 5 years of historical stock data from Yahoo Finance, including data cleaning, normalization, and train-test splitting</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tech-category">Sentiment Integration</td>
+                                                <td class="tech-items">Integrated sentiment analysis from ~1,000 financial news articles via News API to enhance prediction features</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tech-category">Model Deployment</td>
+                                                <td class="tech-items">Serialized trained models using Joblib/XGBoost native format and integrated them into the Streamlit backend for real-time inference</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tech-category">API & Backend Logic</td>
+                                                <td class="tech-items">Developed the backtesting engine, connecting user inputs to model predictions and computing cumulative returns, profit calculations, and performance metrics</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Results & Impact</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">74.63%</span>
+                                            <span class="impact-label">Prediction Accuracy</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">5 Years</span>
+                                            <span class="impact-label">Historical Data</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">~1,000</span>
+                                            <span class="impact-label">News Articles Analyzed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tools & Technologies</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Language</td>
+                                        <td class="tech-items">Python</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Machine Learning</td>
+                                        <td class="tech-items">XGBoost, Scikit-learn, SHAP</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deep Learning</td>
+                                        <td class="tech-items">LSTM (TensorFlow/Keras)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Processing</td>
+                                        <td class="tech-items">Pandas, NumPy, SciPy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Visualization</td>
+                                        <td class="tech-items">Plotly, Streamlit</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Sources</td>
+                                        <td class="tech-items">Yahoo Finance (yfinance), Financial News API</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Model Serialization</td>
+                                        <td class="tech-items">Joblib, XGBoost native format</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Web Framework</td>
+                                        <td class="tech-items">Streamlit</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deployment</td>
+                                        <td class="tech-items">Docker, Streamlit Cloud</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Version Control</td>
+                                        <td class="tech-items">Git, GitHub</td>
                                     </tr>
                                 </tbody>
                             </table>
