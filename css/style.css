@@ -2223,6 +2223,12 @@ body {
     line-height: 1.6;
 }
 
+.tech-purpose {
+    color: #8e8e8e;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 /* Responsive Design for Projects Page */
 @media (max-width: 768px) {
     .project-title {

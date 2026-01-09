@@ -513,19 +513,27 @@
                             
                             <div class="project-links-header">
                                 <a href="https://resume-webapp-896b9.firebaseapp.com" target="_blank" class="project-link-pill">
-                                    <span class="link-icon">🚀</span> Live Demo
+                                    <span class="link-icon">🌐</span> resume-app
                                 </a>
                             </div>
 
-                            <div class="project-description">
-                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
-                            </div>
-
-                            <div class="project-media-gallery">
-                                <div class="media-placeholder">
-                                    <span>📄</span>
-                                    <p>Media content coming soon</p>
+                            <div class="app-showcase vertical-layout">
+                                <div class="app-showcase-video">
+                                    <div class="video-container" id="rocket-video-container">
+                                        <div class="video-loading">
+                                            <span class="loading-spinner"></span>
+                                            <p>Loading demo video...</p>
+                                        </div>
+                                        <video id="rocket-video" controls playsinline class="project-video landscape" style="display: none;">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
                                 </div>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">Rocket is a full-stack web application that enables users to create, manage, and optimize professional resumes tailored to specific job descriptions. The platform leverages OpenAI's GPT-4 to automatically generate ATS-optimized resumes, provide personalized career advice, and create cover letters. Users can upload existing resumes for parsing, store their career history, and generate polished PDFs using multiple LaTeX templates (Classic, Modern, Minimal). The application features secure authentication, real-time resume generation with progress tracking, and export capabilities in PDF and DOCX formats.</p>
                             </div>
                         </div>
 
@@ -535,72 +543,146 @@
                             
                             <div class="role-content">
                                 <div class="role-position">
-                                    <span class="role-badge">Full-Stack Developer</span>
+                                    <span class="role-badge">Project Manager & Backend Developer</span>
                                     <span class="role-duration">February 2025 • Personal Project</span>
                                 </div>
 
                                 <div class="role-details">
-                                    <h4>What I Did</h4>
+                                    <h4>Project Manager</h4>
                                     <ul class="role-list">
-                                        <!-- PLACEHOLDER: Add your responsibilities here -->
-                                        <li><!-- Responsibility 1 --></li>
-                                        <li><!-- Responsibility 2 --></li>
-                                        <li><!-- Responsibility 3 --></li>
+                                        <li>Led and coordinated the development team throughout the project lifecycle</li>
+                                        <li>Managed sprint planning, task allocation, and project milestones</li>
+                                        <li>Facilitated team communication and resolved technical blockers</li>
+                                        <li>Ensured timely delivery of features and maintained documentation</li>
                                     </ul>
-                                </div>
-
-                                <div class="role-results">
-                                    <h4>Results & Impact</h4>
-                                    <div class="impact-grid">
-                                        <!-- PLACEHOLDER: Add your impact metrics here -->
-                                        <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 1</span>
-                                        </div>
-                                        <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 2</span>
-                                        </div>
-                                        <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 3</span>
-                                        </div>
-                                    </div>
+                                    
+                                    <h4>Backend Developer</h4>
+                                    <ul class="role-list">
+                                        <li>Designed and implemented RESTful APIs using Express.js and TypeScript for resume management, parsing, and generation</li>
+                                        <li>Integrated OpenAI GPT-4 for intelligent resume tailoring, job description analysis, and personalized career advice</li>
+                                        <li>Built the LaTeX template engine supporting multiple professional resume templates (Classic, Modern, Minimal) with PDF compilation</li>
+                                        <li>Implemented secure authentication middleware using Firebase Admin SDK for JWT token verification</li>
+                                        <li>Architected the Firestore database schema for users, resumes, career history, and job descriptions</li>
+                                        <li>Developed document export functionality for PDF and DOCX formats</li>
+                                        <li>Created the resume parser service using AI vision to extract structured data from uploaded files</li>
+                                        <li>Wrote unit and integration tests using Jest</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Section 3: Tech Stack Table -->
                         <div class="project-section project-tech-stack">
-                            <h3 class="section-title">Tech Stack</h3>
+                            <h3 class="section-title">Tools & Technologies</h3>
                             
                             <table class="tech-table">
                                 <thead>
                                     <tr>
                                         <th>Category</th>
-                                        <th>Technologies</th>
+                                        <th>Technology</th>
+                                        <th>Purpose</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="tech-category">AI & ML</td>
-                                        <td class="tech-items">OpenAI GPT-4 (parsing, generation, tailoring)</td>
+                                        <td class="tech-category">Frontend Framework</td>
+                                        <td class="tech-items">React 18</td>
+                                        <td class="tech-purpose">UI components and state management</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Frontend</td>
-                                        <td class="tech-items">React, TailwindCSS, Vite, React Router, PDF.js, Axios</td>
+                                        <td class="tech-category">Build Tool</td>
+                                        <td class="tech-items">Vite</td>
+                                        <td class="tech-purpose">Fast development server and bundling</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Backend</td>
-                                        <td class="tech-items">Express.js, TypeScript, Multer, PDFLaTeX</td>
+                                        <td class="tech-category">Styling</td>
+                                        <td class="tech-items">TailwindCSS, ShadCN</td>
+                                        <td class="tech-purpose">Modern responsive UI design</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Infrastructure</td>
-                                        <td class="tech-items">Firebase (Auth, Firestore, Storage, Hosting), Heroku</td>
+                                        <td class="tech-category">Routing</td>
+                                        <td class="tech-items">React Router DOM</td>
+                                        <td class="tech-purpose">Client-side navigation</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Dev Tools</td>
-                                        <td class="tech-items">Jest, Supertest, Git, ESLint, npm</td>
+                                        <td class="tech-category">Backend Runtime</td>
+                                        <td class="tech-items">Node.js</td>
+                                        <td class="tech-purpose">Server-side JavaScript execution</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend Framework</td>
+                                        <td class="tech-items">Express.js</td>
+                                        <td class="tech-purpose">REST API server and middleware</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Language</td>
+                                        <td class="tech-items">TypeScript</td>
+                                        <td class="tech-purpose">Type-safe backend development</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Database</td>
+                                        <td class="tech-items">Firebase Firestore</td>
+                                        <td class="tech-purpose">NoSQL document database</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Authentication</td>
+                                        <td class="tech-items">Firebase Authentication</td>
+                                        <td class="tech-purpose">User auth (Google, Email/Password)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">File Storage</td>
+                                        <td class="tech-items">Firebase Storage</td>
+                                        <td class="tech-purpose">Resume file uploads</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Cloud Functions</td>
+                                        <td class="tech-items">Firebase Functions</td>
+                                        <td class="tech-purpose">Serverless backend deployment</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI/ML</td>
+                                        <td class="tech-items">OpenAI API (GPT-4)</td>
+                                        <td class="tech-purpose">Resume generation, parsing, advice</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Document Generation</td>
+                                        <td class="tech-items">LaTeX (XeLaTeX/pdfLaTeX)</td>
+                                        <td class="tech-purpose">Professional PDF resume creation</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">DOCX Generation</td>
+                                        <td class="tech-items">docx (npm)</td>
+                                        <td class="tech-purpose">Word document export</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">PDF Processing</td>
+                                        <td class="tech-items">pdf-lib, pdfjs-dist</td>
+                                        <td class="tech-purpose">PDF manipulation and viewing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">File Upload</td>
+                                        <td class="tech-items">Multer</td>
+                                        <td class="tech-purpose">Multipart form data handling</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">HTTP Client</td>
+                                        <td class="tech-items">Axios</td>
+                                        <td class="tech-purpose">API requests from frontend</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Testing</td>
+                                        <td class="tech-items">Jest, Supertest</td>
+                                        <td class="tech-purpose">Unit and integration testing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development</td>
+                                        <td class="tech-items">ts-node-dev</td>
+                                        <td class="tech-purpose">TypeScript hot reloading</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Environment</td>
+                                        <td class="tech-items">dotenv</td>
+                                        <td class="tech-purpose">Environment variable management</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -623,15 +705,25 @@
                                 </span>
                             </div>
 
-                            <div class="project-description">
-                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
-                            </div>
-
-                            <div class="project-media-gallery">
-                                <div class="media-placeholder">
-                                    <span>🤖</span>
-                                    <p>Media content coming soon</p>
+                            <div class="app-showcase vertical-layout">
+                                <div class="app-showcase-video">
+                                    <div class="video-container" id="itsupport-video-container">
+                                        <div class="video-loading">
+                                            <span class="loading-spinner"></span>
+                                            <p>Loading demo video...</p>
+                                        </div>
+                                        <video id="itsupport-video" controls playsinline class="project-video landscape" style="display: none;">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
                                 </div>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    An intelligent IT support agent built on AWS cloud infrastructure, designed specifically for healthcare organizations. The system leverages Amazon Bedrock with Claude 3 Haiku for natural language understanding, integrated with Amazon Connect for voice support and Lex V2 for chat interactions. It provides instant, accurate responses to common IT issues while maintaining HIPAA-compliant security standards, reducing support ticket volume and improving first-contact resolution rates.
+                                </p>
                             </div>
                         </div>
 

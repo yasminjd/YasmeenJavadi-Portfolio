@@ -5,9 +5,11 @@ import { app, analytics, storage, ref, getDownloadURL } from './firebase.js';
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔥 Firebase connected:', app.name);
 
-    // Load STYA demo videos from Firebase Storage
+    // Load demo videos from Firebase Storage
     loadSTYAV1Video();
     loadSTYAV2Video();
+    loadITSupportVideo();
+    loadRocketVideo();
 
     // Add animation delays to elements for staggered loading
     const animatedElements = document.querySelectorAll('.content-card, .timeline-item, .project-card, .certificate-card');
@@ -435,6 +437,62 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loadingElement) {
                 loadingElement.innerHTML = `
                     <span>📱</span>
+                    <p>Video unavailable</p>
+                `;
+            }
+        }
+    }
+
+    // Function to load IT Support Agent video from Firebase Storage
+    async function loadITSupportVideo() {
+        const videoElement = document.getElementById('itsupport-video');
+        const loadingElement = document.querySelector('#itsupport-video-container .video-loading');
+        
+        if (!videoElement) return; // Not on projects page
+        
+        try {
+            // IT Support demo video path in Firebase Storage
+            const videoRef = ref(storage, 'copy_6B9EE515-4D42-45B2-AB32-0459BE3D5524.MOV');
+            const videoURL = await getDownloadURL(videoRef);
+            
+            videoElement.src = videoURL;
+            videoElement.style.display = 'block';
+            if (loadingElement) loadingElement.style.display = 'none';
+            
+            console.log('✅ IT Support video loaded from Firebase Storage');
+        } catch (error) {
+            console.error('❌ Error loading IT Support video:', error);
+            if (loadingElement) {
+                loadingElement.innerHTML = `
+                    <span>🤖</span>
+                    <p>Video unavailable</p>
+                `;
+            }
+        }
+    }
+
+    // Function to load Rocket video from Firebase Storage
+    async function loadRocketVideo() {
+        const videoElement = document.getElementById('rocket-video');
+        const loadingElement = document.querySelector('#rocket-video-container .video-loading');
+        
+        if (!videoElement) return; // Not on projects page
+        
+        try {
+            // Rocket demo video path in Firebase Storage
+            const videoRef = ref(storage, 'copy_FC4EB223-05E4-4542-98F3-F5118D27AA98.MOV');
+            const videoURL = await getDownloadURL(videoRef);
+            
+            videoElement.src = videoURL;
+            videoElement.style.display = 'block';
+            if (loadingElement) loadingElement.style.display = 'none';
+            
+            console.log('✅ Rocket video loaded from Firebase Storage');
+        } catch (error) {
+            console.error('❌ Error loading Rocket video:', error);
+            if (loadingElement) {
+                loadingElement.innerHTML = `
+                    <span>🚀</span>
                     <p>Video unavailable</p>
                 `;
             }
