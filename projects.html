@@ -84,6 +84,12 @@
                                 <p class="carousel-card-subtitle">AI Task Scheduling</p>
                                 <span class="carousel-card-tag">AWS + AI</span>
                             </div>
+                            <div class="carousel-card" data-project="redwine">
+                                <div class="carousel-card-icon">🍷</div>
+                                <h3 class="carousel-card-title">Red Wine Quality</h3>
+                                <p class="carousel-card-subtitle">ML Classification</p>
+                                <span class="carousel-card-tag">Machine Learning</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -101,6 +107,7 @@
                     <button class="carousel-dot" data-index="4" aria-label="Go to project 5"></button>
                     <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
                     <button class="carousel-dot" data-index="6" aria-label="Go to project 7"></button>
+                    <button class="carousel-dot" data-index="7" aria-label="Go to project 8"></button>
                 </div>
 
                 <div class="projects-content">
@@ -1250,6 +1257,117 @@
                                     <tr>
                                         <td class="tech-category">Dev Tools</td>
                                         <td class="tech-items">ESLint, TypeScript 5, Turbopack</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="project-redwine" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Red Wine Quality Analyzer</h2>
+                            <p class="project-tagline">Machine Learning Wine Quality Prediction System</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://yasminjd.github.io/Red-Wine-Quality-Analyzer" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">🌐</span> Live Demo
+                                </a>
+                                <a href="https://archive.ics.uci.edu/dataset/186/wine+quality" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📊</span> UCI Dataset
+                                </a>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    A machine learning project that predicts red wine quality ratings (scale 3–8) by analyzing physicochemical properties using classification models. The project involved exploratory data analysis, feature engineering, model training, and evaluation with hyperparameter tuning. Delivered as an interactive HTML report deployed via GitHub Pages.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: My Role & Contributions -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">ML Engineer</span>
+                                    <span class="role-duration">UCI Wine Quality Dataset • 1,599 samples • 12 features</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Key Contributions</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Exploratory Data Analysis</strong> — Performed EDA using correlation heatmaps and visualizations to identify key predictive features (alcohol, sulphates, pH)</li>
+                                        <li><strong>Model Development</strong> — Built and trained Random Forest and Decision Tree classifiers to predict wine quality ratings</li>
+                                        <li><strong>Hyperparameter Tuning</strong> — Applied GridSearchCV to optimize model performance and achieve best results</li>
+                                        <li><strong>Class Imbalance Handling</strong> — Addressed class imbalance using class weight balancing techniques</li>
+                                        <li><strong>Model Evaluation</strong> — Evaluated models using accuracy, precision, recall, F1-score, and confusion matrices</li>
+                                        <li><strong>Deployment</strong> — Exported analysis as a static HTML report and deployed via GitHub Pages</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Results & Impact</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">~70%</span>
+                                            <span class="impact-label">Model Accuracy</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">1,599</span>
+                                            <span class="impact-label">Wine Samples</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">12</span>
+                                            <span class="impact-label">Features Analyzed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tools & Technologies</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Programming Language</td>
+                                        <td class="tech-items">Python</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Processing</td>
+                                        <td class="tech-items">pandas, NumPy, scikit-learn</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Machine Learning</td>
+                                        <td class="tech-items">RandomForestClassifier, DecisionTreeClassifier, GridSearchCV, LabelEncoder</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Visualization</td>
+                                        <td class="tech-items">Matplotlib, Seaborn (heatmaps, line plots)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Evaluation Metrics</td>
+                                        <td class="tech-items">Accuracy, Precision, Recall, F1-Score, Confusion Matrix</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Environment</td>
+                                        <td class="tech-items">Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deployment</td>
+                                        <td class="tech-items">GitHub Pages (static HTML)</td>
                                     </tr>
                                 </tbody>
                             </table>
