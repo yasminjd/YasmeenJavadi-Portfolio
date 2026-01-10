@@ -78,6 +78,12 @@
                                 <p class="carousel-card-subtitle">Stock Prediction</p>
                                 <span class="carousel-card-tag">ML + Finance</span>
                             </div>
+                            <div class="carousel-card" data-project="smartcycle">
+                                <div class="carousel-card-icon">🌸</div>
+                                <h3 class="carousel-card-title">Smart Cycle Calendar</h3>
+                                <p class="carousel-card-subtitle">AI Task Scheduling</p>
+                                <span class="carousel-card-tag">AWS + AI</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -94,6 +100,7 @@
                     <button class="carousel-dot" data-index="3" aria-label="Go to project 4"></button>
                     <button class="carousel-dot" data-index="4" aria-label="Go to project 5"></button>
                     <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
+                    <button class="carousel-dot" data-index="6" aria-label="Go to project 7"></button>
                 </div>
 
                 <div class="projects-content">
@@ -1129,6 +1136,120 @@
                                     <tr>
                                         <td class="tech-category">Version Control</td>
                                         <td class="tech-items">Git, GitHub</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="project-smartcycle" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Smart Cycle Calendar</h2>
+                            <p class="project-tagline">AI-Powered Cycle Tracking & Intelligent Task Scheduling</p>
+                            
+                            <div class="project-links-header">
+                                <span class="project-link-pill status-badge">
+                                    <span class="link-icon">🌸</span> Personal Project
+                                </span>
+                                <span class="project-link-pill">
+                                    <span class="link-icon">☁️</span> AWS Bedrock
+                                </span>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    Smart Cycle Calendar is an AI-powered menstrual cycle tracking and intelligent task scheduling application. The platform leverages AWS Bedrock's Claude AI to optimize productivity by analyzing the user's hormonal cycle phases and strategically scheduling tasks during optimal times. Users can log period starts and symptoms, and the AI predicts the four cycle phases (menstrual, follicular, ovulatory, luteal) with confidence levels. The application features natural language task input where AI categorizes tasks (analytical, creative, communication, routine) and schedules them during the ideal cycle phase. A beautiful FullCalendar integration provides color-coded phase overlays and event management, while AI-driven insights deliver detailed reasoning for scheduling decisions, strategic planning recommendations, and phase-based optimization explanations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: My Role & Contributions -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Project Manager & Full Stack Developer</span>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Key Contributions</h4>
+                                    <ul class="role-list">
+                                        <li><strong>End-to-End Development</strong> — Led project planning, architecture design, and complete development lifecycle from concept to deployment</li>
+                                        <li><strong>Frontend Development</strong> — Designed and implemented the complete UI/UX using Next.js 15 (App Router), React 19, and TailwindCSS with real-time calendar interactions using FullCalendar library</li>
+                                        <li><strong>Backend & AI Integration</strong> — Built the backend API routes integrating with AWS Bedrock Agent for AI inference and intelligent task scheduling</li>
+                                        <li><strong>AWS Lambda Functions</strong> — Developed Python Lambda functions for Action Groups handling calendar operations and cycle phase predictions</li>
+                                        <li><strong>AWS Bedrock Configuration</strong> — Configured and deployed the AWS Bedrock Agent with Claude 3 Haiku, including knowledge base setup (RAG) and session management</li>
+                                        <li><strong>Data Architecture</strong> — Created data models, TypeScript type definitions, and Zod validation schemas for type-safe development</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Key Features Delivered</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">4</span>
+                                            <span class="impact-label">Cycle Phases Predicted</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">AI</span>
+                                            <span class="impact-label">Natural Language Input</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">RAG</span>
+                                            <span class="impact-label">Knowledge Base</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tools & Technologies</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Frontend Framework</td>
+                                        <td class="tech-items">Next.js 15 (App Router), React 19, TypeScript 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Styling</td>
+                                        <td class="tech-items">TailwindCSS 4, clsx, tailwind-merge</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">UI Components</td>
+                                        <td class="tech-items">FullCalendar (day/time grid views), React Hot Toast</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & ML</td>
+                                        <td class="tech-items">AWS Bedrock Agent, Claude 3 Haiku (Anthropic), RAG Knowledge Base</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Cloud & Backend</td>
+                                        <td class="tech-items">AWS Lambda (Python), AWS Bedrock Runtime SDK</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Validation</td>
+                                        <td class="tech-items">Zod (schema validation)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Utilities</td>
+                                        <td class="tech-items">date-fns</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Dev Tools</td>
+                                        <td class="tech-items">ESLint, TypeScript 5, Turbopack</td>
                                     </tr>
                                 </tbody>
                             </table>
