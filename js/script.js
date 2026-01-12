@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Skills accordion functionality
+    // Skills accordion functionality (old)
     const skillsAccordionHeaders = document.querySelectorAll('.skills-accordion-header');
     
     if (skillsAccordionHeaders.length > 0) {
@@ -355,28 +355,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     icon.textContent = '+';
                 }
-                
-                // Allow multiple skills sections to be open (no auto-close)
-                // Uncomment below if you want only one section open at a time:
-                /*
-                skillsAccordionHeaders.forEach(otherHeader => {
-                    if (otherHeader !== this) {
-                        const otherTarget = otherHeader.getAttribute('data-target');
-                        const otherContent = document.getElementById(otherTarget);
-                        const otherIcon = otherHeader.querySelector('.skills-accordion-icon');
-                        
-                        otherHeader.classList.remove('active');
-                        otherContent.classList.remove('active');
-                        otherIcon.textContent = '+';
-                    }
-                });
-                */
             });
         });
         
         // Open first skills section by default
         if (skillsAccordionHeaders[0]) {
             skillsAccordionHeaders[0].click();
+        }
+    }
+
+    // New Expandable Skills functionality
+    const skillExpandableItems = document.querySelectorAll('.skill-expandable-item');
+    
+    if (skillExpandableItems.length > 0) {
+        skillExpandableItems.forEach(item => {
+            const header = item.querySelector('.skill-expandable-header');
+            const icon = item.querySelector('.expand-icon');
+            
+            header.addEventListener('click', function() {
+                // Toggle active class on the item
+                item.classList.toggle('active');
+                
+                // Update icon
+                if (item.classList.contains('active')) {
+                    icon.textContent = '−';
+                } else {
+                    icon.textContent = '+';
+                }
+                
+                // Close other items (accordion behavior)
+                skillExpandableItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        const otherIcon = otherItem.querySelector('.expand-icon');
+                        if (otherIcon) otherIcon.textContent = '+';
+                    }
+                });
+            });
+        });
+        
+        // Open first item by default
+        if (skillExpandableItems[0]) {
+            skillExpandableItems[0].classList.add('active');
+            const firstIcon = skillExpandableItems[0].querySelector('.expand-icon');
+            if (firstIcon) firstIcon.textContent = '−';
         }
     }
 
@@ -512,7 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             // Load the PDF into iframe (lazy load for better performance)
             if (!resumeIframe.src) {
-                resumeIframe.src = 'YasmeenJavadi.pdf';
+                resumeIframe.src = 'YasmeenJavadi_P.pdf';
             }
             resumeModal.style.display = 'flex';
             // Trigger reflow for animation
