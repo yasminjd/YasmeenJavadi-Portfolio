@@ -90,6 +90,12 @@
                                 <p class="carousel-card-subtitle">ML Classification</p>
                                 <span class="carousel-card-tag">Machine Learning</span>
                             </div>
+                            <div class="carousel-card" data-project="ppfstore">
+                                <div class="carousel-card-icon">🚗</div>
+                                <h3 class="carousel-card-title">PPF Store</h3>
+                                <p class="carousel-card-subtitle">E-Commerce Platform</p>
+                                <span class="carousel-card-tag">Full-Stack</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -108,6 +114,7 @@
                     <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
                     <button class="carousel-dot" data-index="6" aria-label="Go to project 7"></button>
                     <button class="carousel-dot" data-index="7" aria-label="Go to project 8"></button>
+                    <button class="carousel-dot" data-index="8" aria-label="Go to project 9"></button>
                 </div>
 
                 <div class="projects-content">
@@ -1503,6 +1510,145 @@
                                     <tr>
                                         <td class="tech-category">Deployment</td>
                                         <td class="tech-items">GitHub Pages (static HTML)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="project-ppfstore" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">PPF Store</h2>
+                            <p class="project-tagline">Full-Featured E-Commerce Platform for Paint Protection Film</p>
+                            
+                            <div class="project-links-header">
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    PPF Store is a full-featured e-commerce web application designed for selling Paint Protection Film (PPF) products with vehicle-specific compatibility. The platform features an intelligent cascading vehicle filter system that allows customers to select their vehicle's make, model, trim, and year to find compatible products. Users can browse the product catalog, add items to their cart with vehicle information, and complete secure purchases through integrated Stripe checkout. The application includes comprehensive user authentication, persistent cart storage, order management, and a complete checkout flow with shipping information collection. Built with modern web technologies, the platform provides a seamless shopping experience with real-time data synchronization and secure payment processing.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: My Role & Contributions -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">My Role & Contributions</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-position">
+                                    <span class="role-badge">Full-Stack Developer</span>
+                                    <span class="role-duration">2024 • Personal Project</span>
+                                </div>
+
+                                <div class="role-intro">
+                                    <p>As the full-stack developer, I architected and implemented the entire application from ground up.</p>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Key Responsibilities</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Frontend Development</strong> — Built the responsive React frontend using TypeScript and Tailwind CSS, implementing reusable components and custom hooks for state management</li>
+                                        <li><strong>Firebase Integration</strong> — Integrated Firebase services including Authentication for user management, Firestore for real-time database operations, and Cloud Functions for serverless backend logic</li>
+                                        <li><strong>Vehicle Filtering System</strong> — Developed the vehicle filtering system with cascading dropdowns that dynamically query Firestore collections for make, model, trim, and year compatibility</li>
+                                        <li><strong>Shopping Cart</strong> — Implemented shopping cart functionality with local storage persistence and real-time updates across the application</li>
+                                        <li><strong>Secure Checkout</strong> — Created protected routes for secure checkout flows with shipping information collection and order management</li>
+                                        <li><strong>Payment Integration</strong> — Integrated Stripe's payment processing system with webhook handlers for order completion and transaction validation</li>
+                                        <li><strong>Database Architecture</strong> — Structured the Firestore database schema for products, vehicles, orders, and user data with optimal query performance</li>
+                                        <li><strong>State Management</strong> — Implemented Context API providers for global state management of authentication and cart operations throughout the application</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Key Features Delivered</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">Cascading</span>
+                                            <span class="impact-label">Vehicle Filters</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">Stripe</span>
+                                            <span class="impact-label">Secure Payments</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">Real-Time</span>
+                                            <span class="impact-label">Data Sync</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Tech Stack Table -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Tools & Technologies</h3>
+                            
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Frontend Framework</td>
+                                        <td class="tech-items">React 18, TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Styling</td>
+                                        <td class="tech-items">Tailwind CSS, PostCSS, Autoprefixer</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Routing</td>
+                                        <td class="tech-items">React Router v6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Build Tool</td>
+                                        <td class="tech-items">Vite</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend Services</td>
+                                        <td class="tech-items">Firebase (Authentication, Firestore, Cloud Functions)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Serverless Functions</td>
+                                        <td class="tech-items">Firebase Functions v2, Node.js 18</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Payment Processing</td>
+                                        <td class="tech-items">Stripe API, Stripe Checkout</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Database</td>
+                                        <td class="tech-items">Cloud Firestore (NoSQL)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">State Management</td>
+                                        <td class="tech-items">React Context API, Custom Hooks</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Icons</td>
+                                        <td class="tech-items">Lucide React</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Authentication</td>
+                                        <td class="tech-items">Firebase Auth (Email/Password)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Storage</td>
+                                        <td class="tech-items">Browser LocalStorage</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Code Quality</td>
+                                        <td class="tech-items">ESLint, TypeScript ESLint</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deployment</td>
+                                        <td class="tech-items">Firebase Hosting</td>
                                     </tr>
                                 </tbody>
                             </table>
