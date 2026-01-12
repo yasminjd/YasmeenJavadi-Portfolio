@@ -437,16 +437,13 @@
                             <p class="project-tagline">AI-Powered Legal Productivity & Billing Automation</p>
                             
                             <div class="project-links-header">
-                                <span class="project-link-pill status-badge">
-                                    <span class="link-icon">🚧</span> In Progress
-                                </span>
                             </div>
 
                             <div class="project-description">
-                                <p><!-- PLACEHOLDER: Add your app description paragraph here --></p>
+                                <p>LawTime is an AI-powered legal billing automation platform designed to revolutionize time tracking for legal professionals. The application uses intelligent screen monitoring to capture work activity every 30 seconds, extracts visible text using OCR technology, and leverages GPT-4 to automatically classify and analyze billable versus non-billable work. The system provides a real-time React dashboard that displays comprehensive billing analytics including daily, weekly, and overall summaries with interactive charts and client tracking. With a focus on privacy and efficiency, the app processes screenshots in-memory only (never saving images to disk) and implements intelligent API batching that reduces costs by 90%, while maintaining accurate time estimation and activity classification for legal work such as contract review, research, and client correspondence.</p>
                             </div>
 
-                            <div class="project-media-gallery">
+                            <div class="project-media-gallery" style="display: none;">
                                 <div class="media-placeholder">
                                     <span>⚖️</span>
                                     <p>Media content coming soon</p>
@@ -460,35 +457,43 @@
                             
                             <div class="role-content">
                                 <div class="role-position">
-                                    <span class="role-badge">Co-Developer & AI Integration Lead</span>
-                                    <span class="role-duration">May 2025 • Collaborative Project</span>
+                                    <span class="role-badge">Developer & Project Manager</span>
+                                    <span class="role-duration">May 2025 • Personal Project</span>
+                                </div>
+
+                                <div class="role-intro">
+                                    <p>As the full-stack developer and project manager for LawTime, I architected and implemented the entire system from concept to deployment, managing the complete development lifecycle.</p>
                                 </div>
 
                                 <div class="role-details">
-                                    <h4>What I Did</h4>
+                                    <h4>Key Responsibilities</h4>
                                     <ul class="role-list">
-                                        <!-- PLACEHOLDER: Add your responsibilities here -->
-                                        <li><!-- Responsibility 1 --></li>
-                                        <li><!-- Responsibility 2 --></li>
-                                        <li><!-- Responsibility 3 --></li>
+                                        <li><strong>System Architecture</strong> — Designed a three-tier architecture with Python-based screen tracking, FastAPI backend REST API, and React frontend dashboard, ensuring seamless real-time data flow between components</li>
+                                        <li><strong>Cost Optimization</strong> — Led technical decision-making to optimize costs by implementing intelligent batching strategies that reduced API calls from 2,880 to 288 per day while maintaining accuracy</li>
+                                        <li><strong>OCR Integration</strong> — Implemented OCR integration with Tesseract and Pytesseract for text extraction from screen captures</li>
+                                        <li><strong>AI Classification</strong> — Integrated OpenAI GPT-4 for intelligent activity analysis and automatic classification of billable versus non-billable work</li>
+                                        <li><strong>Data Persistence</strong> — Designed the data persistence layer with organized daily JSON storage for structured time tracking data</li>
+                                        <li><strong>Frontend Development</strong> — Created responsive UI components with React 18.2, Recharts for data visualization, and modern date handling with Date-fns and React DatePicker</li>
+                                        <li><strong>Backend Development</strong> — Built high-performance REST API using FastAPI and Uvicorn ASGI web server with Python Multipart for file and form data handling</li>
+                                        <li><strong>Privacy-First Design</strong> — Ensured CORS security and privacy-first architecture where sensitive visual data never leaves the local machine</li>
+                                        <li><strong>Deployment Automation</strong> — Developed automated deployment scripts and managed project timeline, balancing feature development with performance optimization</li>
                                     </ul>
                                 </div>
 
                                 <div class="role-results">
                                     <h4>Results & Impact</h4>
                                     <div class="impact-grid">
-                                        <!-- PLACEHOLDER: Add your impact metrics here -->
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 1</span>
+                                            <span class="impact-number">90%</span>
+                                            <span class="impact-label">Cost Reduction</span>
                                         </div>
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 2</span>
+                                            <span class="impact-number">30s</span>
+                                            <span class="impact-label">Capture Interval</span>
                                         </div>
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 3</span>
+                                            <span class="impact-number">Real-Time</span>
+                                            <span class="impact-label">Dashboard Analytics</span>
                                         </div>
                                     </div>
                                 </div>
@@ -497,35 +502,126 @@
 
                         <!-- Section 3: Tech Stack Table -->
                         <div class="project-section project-tech-stack">
-                            <h3 class="section-title">Tech Stack</h3>
+                            <h3 class="section-title">Tech Stack & Tools Used</h3>
                             
                             <table class="tech-table">
                                 <thead>
                                     <tr>
                                         <th>Category</th>
-                                        <th>Technologies</th>
+                                        <th>Technology</th>
+                                        <th>Purpose</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="tech-category">AI & ML</td>
-                                        <td class="tech-items">OpenAI GPT-4, Tesseract OCR</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tech-category">Backend</td>
-                                        <td class="tech-items">FastAPI (Python), Uvicorn</td>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">React 18.2</td>
+                                        <td class="tech-purpose">UI framework and component architecture</td>
                                     </tr>
                                     <tr>
                                         <td class="tech-category">Frontend</td>
-                                        <td class="tech-items">React 18, Axios, Recharts, date-fns, React Datepicker</td>
+                                        <td class="tech-items">Recharts</td>
+                                        <td class="tech-purpose">Interactive data visualization and charts</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Data Handling</td>
-                                        <td class="tech-items">JSON logging, DOCX/TXT/PDF/Markdown parsing</td>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">Axios</td>
+                                        <td class="tech-purpose">REST API communication</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">System Design</td>
-                                        <td class="tech-items">30s screen capture, 5-min batch analysis, real-time updates</td>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">Lucide React</td>
+                                        <td class="tech-purpose">Modern icon library</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">Date-fns</td>
+                                        <td class="tech-purpose">Date manipulation and formatting</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Frontend</td>
+                                        <td class="tech-items">React DatePicker</td>
+                                        <td class="tech-purpose">Date selection components</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">Python 3.8+</td>
+                                        <td class="tech-purpose">Core programming language</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">FastAPI</td>
+                                        <td class="tech-purpose">High-performance REST API framework</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">Uvicorn</td>
+                                        <td class="tech-purpose">ASGI web server</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend</td>
+                                        <td class="tech-items">Python Multipart</td>
+                                        <td class="tech-purpose">File and form data handling</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & Processing</td>
+                                        <td class="tech-items">OpenAI GPT-4</td>
+                                        <td class="tech-purpose">Intelligent activity analysis and classification</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & Processing</td>
+                                        <td class="tech-items">Pytesseract</td>
+                                        <td class="tech-purpose">OCR text extraction wrapper</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & Processing</td>
+                                        <td class="tech-items">Tesseract OCR</td>
+                                        <td class="tech-purpose">Open-source OCR engine</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & Processing</td>
+                                        <td class="tech-items">Pillow (PIL)</td>
+                                        <td class="tech-purpose">Image processing library</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">AI & Processing</td>
+                                        <td class="tech-items">MSS</td>
+                                        <td class="tech-purpose">Cross-platform screenshot capture</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Tools</td>
+                                        <td class="tech-items">Git</td>
+                                        <td class="tech-purpose">Version control system</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Tools</td>
+                                        <td class="tech-items">Bash</td>
+                                        <td class="tech-purpose">Deployment automation scripts</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Tools</td>
+                                        <td class="tech-items">Node.js & npm</td>
+                                        <td class="tech-purpose">JavaScript runtime and package management</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Architecture</td>
+                                        <td class="tech-items">REST API</td>
+                                        <td class="tech-purpose">API design pattern</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Architecture</td>
+                                        <td class="tech-items">JSON</td>
+                                        <td class="tech-purpose">Data persistence and storage format</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Architecture</td>
+                                        <td class="tech-items">CORS</td>
+                                        <td class="tech-purpose">Cross-origin security configuration</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Architecture</td>
+                                        <td class="tech-items">Microservices</td>
+                                        <td class="tech-purpose">Distributed system architecture</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -750,7 +846,7 @@
                             <div class="project-description-block">
                                 <h3 class="app-description-title">About the Project</h3>
                                 <p class="app-description-text">
-                                    An intelligent IT support agent built on AWS cloud infrastructure, designed specifically for healthcare organizations. The system leverages Amazon Bedrock with Claude 3 Haiku for natural language understanding, integrated with Amazon Connect for voice support and Lex V2 for chat interactions. It provides instant, accurate responses to common IT issues while maintaining HIPAA-compliant security standards, reducing support ticket volume and improving first-contact resolution rates.
+                                    The Healthcare IT Support Agent is an enterprise-grade AI-powered conversational support system designed to revolutionize IT assistance for a major healthcare institution. The system provides intelligent, multi-channel support through both voice and chat interfaces, handling complex authentication workflows, password resets, account management, and IT troubleshooting. Built on AWS cloud infrastructure, the solution leverages a sophisticated multi-agent architecture with a Supervisor Agent that intelligently classifies user intent and routes requests to specialized agents (such as the Authentication Agent) based on their capabilities. The system integrates with multiple backend systems including Omnicell, EPIC, and Active Directory, providing automated resolutions for routine issues while maintaining strict security protocols through identity verification. With built-in knowledge base integration, the agent can query technical documentation to provide instant troubleshooting guidance, reducing support ticket volume and providing 24/7 assistance to healthcare staff.
                                 </p>
                             </div>
                         </div>
@@ -761,35 +857,42 @@
                             
                             <div class="role-content">
                                 <div class="role-position">
-                                    <span class="role-badge">Solution Architect</span>
-                                    <span class="role-duration">2024 • Professional Project</span>
+                                    <span class="role-badge">Lead Architect & Developer</span>
+                                    <span class="role-duration">2024 • Enterprise Healthcare POC</span>
+                                </div>
+
+                                <div class="role-intro">
+                                    <p>As the lead architect and developer of this proof-of-concept, I designed and implemented the complete end-to-end AI agent system from architecture to deployment.</p>
                                 </div>
 
                                 <div class="role-details">
-                                    <h4>What I Did</h4>
+                                    <h4>Key Responsibilities</h4>
                                     <ul class="role-list">
-                                        <!-- PLACEHOLDER: Add your responsibilities here -->
-                                        <li><!-- Responsibility 1 --></li>
-                                        <li><!-- Responsibility 2 --></li>
-                                        <li><!-- Responsibility 3 --></li>
+                                        <li><strong>Multi-Agent Architecture</strong> — Developed the multi-agent orchestration framework using AWS Bedrock with Claude 3 Haiku and Sonnet models, creating sophisticated agent instructions and action group schemas that enable intelligent intent classification and routing</li>
+                                        <li><strong>Lambda Function Development</strong> — Built three core Lambda functions in Python to handle identity verification (with secure employee credential validation), account management (featuring automated password resets and account unlocks across multiple systems), and system integration (for form submissions and ticket creation)</li>
+                                        <li><strong>Channel Integration</strong> — Architected the Amazon Connect and Amazon Lex integration using an intentional fallback pattern to route all conversations directly to the AI agent, ensuring seamless conversation flow across voice and chat channels</li>
+                                        <li><strong>Backend System Integration</strong> — Integrated with multiple enterprise systems including Omnicell, EPIC, and Active Directory for automated IT support workflows</li>
+                                        <li><strong>Security & Authentication</strong> — Implemented secure identity verification workflows with SSN-based authentication and IAM role-based access control</li>
+                                        <li><strong>Knowledge Base Integration</strong> — Created S3-based knowledge base system for technical documentation retrieval and instant troubleshooting guidance</li>
+                                        <li><strong>DevOps & Automation</strong> — Created comprehensive deployment automation scripts, CloudFormation templates, extensive testing frameworks, and detailed technical documentation to enable reproducible deployments and system validation</li>
+                                        <li><strong>Testing & Validation</strong> — Developed custom Python test scripts and validation frameworks to ensure production-ready engineering standards</li>
                                     </ul>
                                 </div>
 
                                 <div class="role-results">
                                     <h4>Results & Impact</h4>
                                     <div class="impact-grid">
-                                        <!-- PLACEHOLDER: Add your impact metrics here -->
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 1</span>
+                                            <span class="impact-number">7+</span>
+                                            <span class="impact-label">IT Use Cases</span>
                                         </div>
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 2</span>
+                                            <span class="impact-number">24/7</span>
+                                            <span class="impact-label">Automated Support</span>
                                         </div>
                                         <div class="impact-card">
-                                            <span class="impact-number">--</span>
-                                            <span class="impact-label">Metric 3</span>
+                                            <span class="impact-number">30%</span>
+                                            <span class="impact-label">Ticket Reduction</span>
                                         </div>
                                     </div>
                                 </div>
@@ -798,7 +901,7 @@
 
                         <!-- Section 3: Tech Stack Table -->
                         <div class="project-section project-tech-stack">
-                            <h3 class="section-title">Tech Stack</h3>
+                            <h3 class="section-title">Tools & Technologies</h3>
                             
                             <table class="tech-table">
                                 <thead>
@@ -809,24 +912,56 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="tech-category">AI & ML</td>
-                                        <td class="tech-items">AWS Bedrock Agent (Claude 3 Haiku), Document Embedding</td>
+                                        <td class="tech-category">AI/ML Services</td>
+                                        <td class="tech-items">AWS Bedrock Agent, Claude 3 Haiku, Claude 3 Sonnet, Amazon Lex</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">AWS Infrastructure</td>
-                                        <td class="tech-items">Amazon Connect, Lex V2, Lambda, S3, IAM, CloudFormation</td>
+                                        <td class="tech-category">Cloud Infrastructure</td>
+                                        <td class="tech-items">AWS Lambda, Amazon Connect, Amazon S3, AWS IAM</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Development</td>
-                                        <td class="tech-items">Python, JSON, Git, AWS CLI</td>
+                                        <td class="tech-category">Programming Languages</td>
+                                        <td class="tech-items">Python 3.9+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Formats</td>
+                                        <td class="tech-items">JSON, YAML</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Backend Integration</td>
+                                        <td class="tech-items">REST APIs, Lambda Function URLs</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Infrastructure as Code</td>
+                                        <td class="tech-items">AWS CloudFormation, Python boto3 SDK</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Testing & Debugging</td>
+                                        <td class="tech-items">Custom Python test scripts, AWS CLI</td>
                                     </tr>
                                     <tr>
                                         <td class="tech-category">Security</td>
-                                        <td class="tech-items">HIPAA-ready architecture, Scoped IAM roles, Serverless isolation</td>
+                                        <td class="tech-items">IAM Roles & Policies, Identity Verification Workflows, SSN-based Authentication</td>
                                     </tr>
                                     <tr>
-                                        <td class="tech-category">Channels</td>
-                                        <td class="tech-items">Voice (Amazon Connect), Chat (Lex V2), Multi-modal integration</td>
+                                        <td class="tech-category">Knowledge Management</td>
+                                        <td class="tech-items">S3-based Knowledge Base, PDF Document Processing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Session Management</td>
+                                        <td class="tech-items">Amazon Lex Session Attributes, Bedrock Agent Session IDs</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deployment & DevOps</td>
+                                        <td class="tech-items">Shell Scripts (bash/zsh), Automated Deployment Scripts</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Documentation</td>
+                                        <td class="tech-items">Markdown, Technical Design Documents</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Enterprise Systems</td>
+                                        <td class="tech-items">Omnicell, EPIC, Active Directory</td>
                                     </tr>
                                 </tbody>
                             </table>
