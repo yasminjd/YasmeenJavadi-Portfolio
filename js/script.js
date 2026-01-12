@@ -573,4 +573,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Course Category Expand/Collapse functionality
+    const courseCategories = document.querySelectorAll('.course-category');
+    
+    if (courseCategories.length > 0) {
+        courseCategories.forEach(category => {
+            const headerWrapper = category.querySelector('.category-header-wrapper');
+            const toggleIcon = category.querySelector('.category-toggle');
+            
+            if (headerWrapper && toggleIcon) {
+                headerWrapper.addEventListener('click', function() {
+                    // Toggle active class on the category
+                    category.classList.toggle('active');
+                    
+                    // Update icon
+                    if (category.classList.contains('active')) {
+                        toggleIcon.textContent = '−';
+                    } else {
+                        toggleIcon.textContent = '+';
+                    }
+                });
+            }
+        });
+    }
 });
