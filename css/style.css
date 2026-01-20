@@ -1589,13 +1589,13 @@ body {
     background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
     border: 2px solid #2d2d2d;
     border-radius: 20px;
-    padding: 3rem 2.5rem;
+    padding: 2rem 1.75rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 280px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1617,10 +1617,10 @@ body {
 .carousel-card::after {
     content: 'Click to explore →';
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #5a5a5a;
     opacity: 0;
     transition: all 0.3s ease;
@@ -1642,13 +1642,13 @@ body {
 }
 
 .carousel-card-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     display: block;
 }
 
 .carousel-card-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #ececec;
     margin: 0 0 0.5rem 0;
@@ -1660,17 +1660,17 @@ body {
 }
 
 .carousel-card-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #8e8e8e;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .carousel-card-tag {
     display: inline-block;
-    padding: 0.5rem 1.25rem;
+    padding: 0.4rem 1rem;
     background: #2d2d2d;
     color: #8e8e8e;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
