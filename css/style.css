@@ -1614,18 +1614,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.carousel-card::after {
-    content: 'Click to explore →';
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    color: #5a5a5a;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
 .carousel-card:hover {
     border-color: #f8b4c4;
     transform: translateY(-12px) scale(1.02);
@@ -1634,11 +1622,6 @@ body {
 
 .carousel-card:hover::before {
     opacity: 1;
-}
-
-.carousel-card:hover::after {
-    opacity: 1;
-    color: #f8b4c4;
 }
 
 .carousel-card-icon {
