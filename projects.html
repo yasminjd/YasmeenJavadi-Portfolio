@@ -96,6 +96,12 @@
                                 <p class="carousel-card-subtitle">E-Commerce Platform</p>
                                 <span class="carousel-card-tag">Full-Stack</span>
                             </div>
+                            <div class="carousel-card" data-project="gpt2-xai">
+                                <div class="carousel-card-icon">🧠</div>
+                                <h3 class="carousel-card-title">GPT-2 Explainability</h3>
+                                <p class="carousel-card-subtitle">Model Interpretability Study</p>
+                                <span class="carousel-card-tag">Explainable AI</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -115,6 +121,7 @@
                     <button class="carousel-dot" data-index="6" aria-label="Go to project 7"></button>
                     <button class="carousel-dot" data-index="7" aria-label="Go to project 8"></button>
                     <button class="carousel-dot" data-index="8" aria-label="Go to project 9"></button>
+                    <button class="carousel-dot" data-index="9" aria-label="Go to project 10"></button>
                 </div>
 
                 <div class="projects-content">
@@ -1649,6 +1656,180 @@
                                     <tr>
                                         <td class="tech-category">Deployment</td>
                                         <td class="tech-items">Firebase Hosting</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- GPT-2 Explainability Project -->
+                    <div id="project-gpt2-xai" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">Inside GPT-2: An Explainability Study</h2>
+                            <p class="project-tagline">Uncovering Attention Mechanisms & Internal Decision-Making in Language Models</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://colab.research.google.com/drive/13upXBpIyarJadoVLUbPoGz7XFqgpl89_?usp=sharing" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📓</span> View Colab Notebook
+                                </a>
+                                <a href="/Project3.pdf" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📄</span> View Full Report
+                                </a>
+                                <span class="project-link-pill status-badge">
+                                    <span class="link-icon">🔬</span> Research Project
+                                </span>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    This research project explores the internal mechanisms of the distilled GPT-2 language model through systematic experiments in explainability and interpretability. By analyzing attention patterns, probability distributions, and model behavior under controlled manipulations, this study reveals how transformer models process language, assign meaning to tokens, and generate coherent text. The project demonstrates key concepts in Explainable AI (XAI) and mechanistic interpretability, making the "black box" of neural networks more transparent and understandable.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Experiments & Methodology -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Experiments & Methodology</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-intro">
+                                    <p>This study consisted of seven systematic experiments designed to probe different aspects of the GPT-2 model's internal workings:</p>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Experiment 1: Text Generation with Temperature Sampling</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Understand how temperature affects text coherence vs. creativity</li>
+                                        <li><strong>Method</strong> — Generated 3 continuations at each temperature level (0.3, 1.0, 3.0) for 100 tokens</li>
+                                        <li><strong>Finding</strong> — Lower temperatures produce predictable, coherent text; higher temperatures introduce randomness and creative diversity</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 2: Tokenization Analysis</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Examine how the tokenizer breaks down words into subword units</li>
+                                        <li><strong>Method</strong> — Analyzed correct spelling and misspellings ("Apple", "Aplle", "Appol")</li>
+                                        <li><strong>Finding</strong> — Misspellings produce different token sequences, affecting model predictions</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 3: Attention Visualization</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Identify specialized attention heads and their functions</li>
+                                        <li><strong>Method</strong> — Generated heatmaps for all 12 first-layer attention heads across multiple sentences</li>
+                                        <li><strong>Finding</strong> — Head 1 focuses on punctuation; Head 3 shows positional/diagonal patterns</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 4: Log-Probability Analysis</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Measure model confidence for each token in a sequence</li>
+                                        <li><strong>Method</strong> — Plotted log-probabilities for a Wikipedia sentence and a merged unrelated passage</li>
+                                        <li><strong>Finding</strong> — Model assigns low probabilities to contextually irrelevant tokens, showing context understanding</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 5: Conditional Probability Distribution</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Analyze model's top predictions at low-probability token positions</li>
+                                        <li><strong>Method</strong> — Extracted top-10 token predictions for Game of Thrones quote</li>
+                                        <li><strong>Finding</strong> — Figurative language (e.g., "resides", "shadow") receives low probability; model prefers literal continuations</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 6: Text Regeneration</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Observe how replacing low-probability tokens changes text generation</li>
+                                        <li><strong>Method</strong> — Replaced "trick" with top prediction "place" and regenerated continuation</li>
+                                        <li><strong>Finding</strong> — Model finds semantic connections (e.g., "resides" → "place"), shifting narrative meaning</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 7: Attention Head Ablation</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Measure impact of individual attention heads on predictions</li>
+                                        <li><strong>Method</strong> — Disabled Head 3 and compared log-probability differences across tokens</li>
+                                        <li><strong>Finding</strong> — Ablating Head 3 increased confidence for end-of-sentence punctuation, suggesting the head suppresses terminal tokens</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Key Insights -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Key Insights & Discoveries</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-details">
+                                    <ul class="role-list">
+                                        <li><strong>Attention Specialization</strong> — Different attention heads specialize in distinct linguistic tasks (punctuation detection, positional encoding)</li>
+                                        <li><strong>Context Sensitivity</strong> — Model demonstrates strong contextual awareness by assigning very low probabilities to semantically unrelated tokens</li>
+                                        <li><strong>Figurative Language Challenge</strong> — Metaphorical and non-literal expressions receive lower probabilities than straightforward, literal phrasing</li>
+                                        <li><strong>Temperature Trade-off</strong> — Temperature parameter provides a clear trade-off between coherence (low) and creativity (high)</li>
+                                        <li><strong>Head Ablation Effects</strong> — Removing specific heads reveals their suppressive or amplifying roles in token prediction</li>
+                                        <li><strong>Tokenization Impact</strong> — Spelling variations create different token sequences, directly affecting model behavior</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Project Highlights</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">7</span>
+                                            <span class="impact-label">Experiments</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">12</span>
+                                            <span class="impact-label">Attention Heads</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">GPT-2</span>
+                                            <span class="impact-label">Model Analyzed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Tech Stack & Tools -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Technologies & Tools Used</h3>
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Language Model</td>
+                                        <td class="tech-items">DistilGPT-2 (Hugging Face Transformers)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Deep Learning Framework</td>
+                                        <td class="tech-items">PyTorch</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">NLP Libraries</td>
+                                        <td class="tech-items">Hugging Face Transformers, AutoTokenizer, AutoModelForCausalLM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Visualization</td>
+                                        <td class="tech-items">Matplotlib, NumPy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Environment</td>
+                                        <td class="tech-items">Google Colab, Jupyter Notebooks</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Python Version</td>
+                                        <td class="tech-items">Python 3.x</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Interpretability Techniques</td>
+                                        <td class="tech-items">Attention Visualization, Log-Probability Analysis, Ablation Studies</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Research Domain</td>
+                                        <td class="tech-items">Explainable AI (XAI), Mechanistic Interpretability, Natural Language Processing</td>
                                     </tr>
                                 </tbody>
                             </table>
