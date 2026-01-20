@@ -24,7 +24,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background: #0d0d0d;
-    padding: 2rem;
+    padding: 1.5rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -881,7 +881,7 @@ body {
 }
 
 .page-title {
-    font-size: clamp(1.75rem, 4vw, 2.2rem);
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     font-weight: 700;
     color: #ffffff;
     margin: 0;
@@ -2071,8 +2071,8 @@ body {
 
 /* Project Detail Sections - New Structure */
 .project-section {
-    margin-bottom: 3rem;
-    padding-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid #2d2d2d;
 }
 
@@ -2082,7 +2082,7 @@ body {
 }
 
 .project-overview .project-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #ececec;
     margin-bottom: 0.5rem;
@@ -2094,10 +2094,10 @@ body {
 }
 
 .project-tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #f8b4c4;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .project-links-header {
@@ -2110,14 +2110,14 @@ body {
 .project-link-pill {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
     background: #1a1a1a;
     border: 1px solid #3d3d3d;
     border-radius: 50px;
     color: #b4b4b4;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -2154,8 +2154,8 @@ body {
 }
 
 .project-description p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
     color: #b4b4b4;
 }
 
@@ -2288,11 +2288,11 @@ body {
 }
 
 .app-description-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #ececec;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
     border-bottom: 2px solid #f8b4c4;
     transition: color 0.4s ease;
     cursor: default;
@@ -2304,8 +2304,8 @@ body {
 }
 
 .app-description-text {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.85);
     text-align: left;
 }
@@ -2363,11 +2363,11 @@ body {
 
 /* Role Section */
 .section-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #ececec;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid #f8b4c4;
     transition: color 0.4s ease;
     cursor: default;
@@ -2432,10 +2432,10 @@ body {
 .role-list li {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
     color: #b4b4b4;
-    line-height: 1.7;
-    font-size: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .role-list li::before {
@@ -2457,7 +2457,7 @@ body {
     background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
     border: 1px solid #2d2d2d;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -2470,15 +2470,15 @@ body {
 
 .impact-number {
     display: block;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #f8b4c4;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .impact-label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #8e8e8e;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -2499,19 +2499,19 @@ body {
 }
 
 .tech-table th {
-    padding: 1rem 1.5rem;
+    padding: 0.85rem 1.25rem;
     text-align: left;
     font-weight: 600;
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .tech-table td {
-    padding: 1rem 1.5rem;
+    padding: 0.85rem 1.25rem;
     border-bottom: 1px solid #2d2d2d;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .tech-table tbody tr:last-child td {
@@ -2713,12 +2713,12 @@ body {
 }
 
 .certificates-section .section-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     text-align: left;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     border-bottom: 2px solid #f8b4c4;
     display: inline-block;
     transition: color 0.4s ease;
@@ -2799,12 +2799,12 @@ body {
 }
 
 .education-section .section-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     text-align: left;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     border-bottom: 2px solid #f8b4c4;
     display: inline-block;
     transition: color 0.4s ease;
@@ -2851,10 +2851,10 @@ body {
 }
 
 .degree-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.6rem 0;
     line-height: 1.3;
     transition: color 0.3s ease;
 }
@@ -2870,7 +2870,7 @@ body {
 }
 
 .institution {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #ececec;
     margin: 0;
@@ -2882,7 +2882,7 @@ body {
 }
 
 .graduation {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #b4b4b4;
     margin: 0;
 }
@@ -2925,10 +2925,10 @@ body {
 }
 
 .coursework-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0 0 1.25rem 0;
+    margin: 0 0 1rem 0;
     transition: color 0.3s ease;
 }
 
@@ -2970,7 +2970,7 @@ body {
 }
 
 .category-header {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #f8b4c4;
     margin: 0;
@@ -3030,12 +3030,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 0.85rem;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     color: #cbd5e0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
