@@ -102,6 +102,12 @@
                                 <p class="carousel-card-subtitle">Model Interpretability Study</p>
                                 <span class="carousel-card-tag">Explainable AI</span>
                             </div>
+                            <div class="carousel-card" data-project="cnn-saliency">
+                                <div class="carousel-card-icon">👁️</div>
+                                <h3 class="carousel-card-title">CNN Saliency Analysis</h3>
+                                <p class="carousel-card-subtitle">Vision Model Interpretability</p>
+                                <span class="carousel-card-tag">Computer Vision</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -122,6 +128,7 @@
                     <button class="carousel-dot" data-index="7" aria-label="Go to project 8"></button>
                     <button class="carousel-dot" data-index="8" aria-label="Go to project 9"></button>
                     <button class="carousel-dot" data-index="9" aria-label="Go to project 10"></button>
+                    <button class="carousel-dot" data-index="10" aria-label="Go to project 11"></button>
                 </div>
 
                 <div class="projects-content">
@@ -1830,6 +1837,177 @@
                                     <tr>
                                         <td class="tech-category">Research Domain</td>
                                         <td class="tech-items">Explainable AI (XAI), Mechanistic Interpretability, Natural Language Processing</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- CNN Saliency Visualization Project -->
+                    <div id="project-cnn-saliency" class="project-detail">
+                        <!-- Section 1: Project Overview -->
+                        <div class="project-section project-overview">
+                            <h2 class="project-title">CNN Saliency Visualization: Evaluating Interpretability Methods</h2>
+                            <p class="project-tagline">Comparing 5 Visualization Techniques to Understand What CNNs See</p>
+                            
+                            <div class="project-links-header">
+                                <a href="https://colab.research.google.com/drive/1j6XdeaxEVkraIpYrT6xN6PLXOxvGJasi?usp=sharing" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📓</span> View Colab Notebook
+                                </a>
+                                <a href="/project2-2.pdf" target="_blank" class="project-link-pill">
+                                    <span class="link-icon">📄</span> View Full Report
+                                </a>
+                                <span class="project-link-pill status-badge">
+                                    <span class="link-icon">👁️</span> Computer Vision Research
+                                </span>
+                            </div>
+                            
+                            <div class="project-description-block">
+                                <h3 class="app-description-title">About the Project</h3>
+                                <p class="app-description-text">
+                                    This research evaluates and compares five prominent saliency visualization methods—Vanilla Gradients, Integrated Gradients, SmoothGrad, Occlusion, and Grad-CAM—to determine which techniques provide the most interpretable insights into CNN decision-making. Through systematic parameter tuning and comparative analysis across multiple test images, this study identifies SmoothGrad and Integrated Gradients as the most effective methods for model interpretability. These techniques consistently highlight semantically meaningful features while reducing pixel-level noise, making them superior for understanding how vision models classify objects and for debugging model behavior in real-world applications.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Experiments & Methodology -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Experiments & Methodology</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-intro">
+                                    <p>This study conducted four systematic experiments to evaluate saliency visualization methods across different dimensions:</p>
+                                </div>
+
+                                <div class="role-details">
+                                    <h4>Experiment 1: SmoothGrad Parameter Optimization</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Determine optimal parameters for noise-reduced gradient visualizations</li>
+                                        <li><strong>Method</strong> — Created 3×3 grid varying n_samples (5, 25, 125) and stdev (0.01, 0.05, 0.25)</li>
+                                        <li><strong>Finding</strong> — n_samples=25 with stdev=0.05 provides best balance between clarity and stability</li>
+                                        <li><strong>Result</strong> — Higher sample counts reduce noise; moderate stdev preserves fine details without over-smoothing</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 2: Occlusion Configuration Analysis</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Optimize occlusion-based attribution for meaningful feature detection</li>
+                                        <li><strong>Method</strong> — Tested window sizes (16, 32, 48) with two baselines (zeros, blur) across multiple images</li>
+                                        <li><strong>Finding</strong> — window_size=32 with blur baseline offers optimal interpretability</li>
+                                        <li><strong>Result</strong> — Smaller windows create noise; larger windows lose detail; blur baseline produces natural transitions</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 3: Five-Method Comparative Analysis</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Compare all five methods across diverse image types and classification scenarios</li>
+                                        <li><strong>Method</strong> — Generated saliency maps for top-3 predictions on 4 test images (elephant, dogs, construction equipment, car with dog)</li>
+                                        <li><strong>Finding</strong> — Integrated Gradients and SmoothGrad consistently highlight semantically meaningful regions</li>
+                                        <li><strong>Result</strong> — GradCAM and Occlusion show coarse, blocky patterns; Vanilla Gradients appear noisy and scattered</li>
+                                    </ul>
+                                    
+                                    <h4>Experiment 4: Counterfactual Sensitivity Testing</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Objective</strong> — Test model sensitivity to feature occlusion and validate saliency map accuracy</li>
+                                        <li><strong>Method</strong> — Occluded elephant's head/trunk region and compared before/after predictions and saliency maps</li>
+                                        <li><strong>Finding</strong> — Model confidence dropped for occluded features; saliency redirected to remaining visible regions</li>
+                                        <li><strong>Result</strong> — Confirms that highlighted regions in saliency maps contain discriminative features used by the model</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Key Insights -->
+                        <div class="project-section project-role">
+                            <h3 class="section-title">Key Insights & Discoveries</h3>
+                            
+                            <div class="role-content">
+                                <div class="role-details">
+                                    <h4>Method Rankings</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Most Effective: SmoothGrad & Integrated Gradients</strong> — Clear, stable, semantically meaningful feature attribution with reduced noise</li>
+                                        <li><strong>Moderate: Occlusion</strong> — Highlights important regions but produces coarse, blocky patterns lacking fine detail</li>
+                                        <li><strong>Least Effective: Vanilla Gradients & GradCAM</strong> — Noisy, scattered patterns (Vanilla) or low-resolution heatmaps (GradCAM)</li>
+                                    </ul>
+                                    
+                                    <h4>Parameter Sensitivity Findings</h4>
+                                    <ul class="role-list">
+                                        <li><strong>SmoothGrad Samples</strong> — Increasing from 5→125 samples progressively smooths maps and reduces pixel-level noise</li>
+                                        <li><strong>Noise Standard Deviation</strong> — Low stdev (0.01-0.05) preserves texture; high stdev (0.25) overly diffuses attribution</li>
+                                        <li><strong>Occlusion Window Size</strong> — Small windows (16) show fine detail but introduce noise; large windows (48) over-smooth</li>
+                                        <li><strong>Baseline Strategy</strong> — Blur baseline produces natural transitions; zeros baseline creates artificial sharp edges</li>
+                                    </ul>
+                                    
+                                    <h4>Interpretability Criteria</h4>
+                                    <ul class="role-list">
+                                        <li><strong>Semantic Alignment</strong> — Best methods highlight features humans recognize as relevant (e.g., animal faces, vehicle structures)</li>
+                                        <li><strong>Stability</strong> — Effective visualizations remain consistent across small parameter variations</li>
+                                        <li><strong>Clarity</strong> — Superior methods balance detail preservation with noise reduction</li>
+                                        <li><strong>Faithfulness</strong> — Counterfactual experiments confirm highlighted regions truly influence model decisions</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role-results">
+                                    <h4>Project Highlights</h4>
+                                    <div class="impact-grid">
+                                        <div class="impact-card">
+                                            <span class="impact-number">5</span>
+                                            <span class="impact-label">Methods Evaluated</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">4</span>
+                                            <span class="impact-label">Test Images</span>
+                                        </div>
+                                        <div class="impact-card">
+                                            <span class="impact-number">30+</span>
+                                            <span class="impact-label">Visualizations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Tech Stack & Tools -->
+                        <div class="project-section project-tech-stack">
+                            <h3 class="section-title">Technologies & Tools Used</h3>
+                            <table class="tech-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tech-category">Deep Learning Framework</td>
+                                        <td class="tech-items">PyTorch</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Visualization Library</td>
+                                        <td class="tech-items">Captum (PyTorch Interpretability)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Model Architecture</td>
+                                        <td class="tech-items">Convolutional Neural Networks (CNNs)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Saliency Methods</td>
+                                        <td class="tech-items">Vanilla Gradients, Integrated Gradients, SmoothGrad, Occlusion, Grad-CAM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Data Visualization</td>
+                                        <td class="tech-items">Matplotlib, NumPy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Development Environment</td>
+                                        <td class="tech-items">Google Colab, Jupyter Notebooks</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Python Version</td>
+                                        <td class="tech-items">Python 3.x</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tech-category">Research Domain</td>
+                                        <td class="tech-items">Explainable AI (XAI), Computer Vision, Model Interpretability</td>
                                     </tr>
                                 </tbody>
                             </table>
