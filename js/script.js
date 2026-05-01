@@ -574,6 +574,100 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ===== Chatbot =====
+    const chatbotFab     = document.getElementById('chatbotFab');
+    const chatbotModal   = document.getElementById('chatbotModal');
+    const chatbotClose   = document.getElementById('chatbotClose');
+    const chatbotOverlay = document.getElementById('chatbotOverlay');
+    const chatbotInput   = document.getElementById('chatbotInput');
+    const chatbotSend    = document.getElementById('chatbotSend');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+
+    if (chatbotFab && chatbotModal) {
+        function openChatbot() {
+            chatbotModal.classList.add('active');
+            chatbotInput.focus();
+        }
+
+        function closeChatbot() {
+            chatbotModal.classList.remove('active');
+        }
+
+        chatbotFab.addEventListener('click', openChatbot);
+        chatbotClose.addEventListener('click', closeChatbot);
+        chatbotOverlay.addEventListener('click', closeChatbot);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && chatbotModal.classList.contains('active')) {
+                closeChatbot();
+            }
+        });
+
+        function appendMessage(text, role) {
+            const msg = document.createElement('div');
+            msg.classList.add('chatbot-message', role);
+            const p = document.createElement('p');
+            p.textContent = text;
+            msg.appendChild(p);
+            chatbotMessages.appendChild(msg);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            return msg;
+        }
+
+        function showTyping() {
+            const typing = document.createElement('div');
+            typing.classList.add('chatbot-message', 'bot', 'chatbot-typing');
+            typing.id = 'chatbotTyping';
+            typing.innerHTML = '<span></span><span></span><span></span>';
+            chatbotMessages.appendChild(typing);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function removeTyping() {
+            const t = document.getElementById('chatbotTyping');
+            if (t) t.remove();
+        }
+
+        async function sendMessage() {
+            const text = chatbotInput.value.trim();
+            if (!text) return;
+
+            chatbotInput.value = '';
+            chatbotSend.disabled = true;
+            appendMessage(text, 'user');
+            showTyping();
+
+            try {
+                // Use relative URL - works in both development (via Vite proxy) and production (Vercel)
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+
+                removeTyping();
+
+                if (!res.ok) throw new Error('Request failed');
+                const data = await res.json();
+                appendMessage(data.reply, 'bot');
+            } catch {
+                removeTyping();
+                appendMessage("Sorry, I couldn't connect right now. Please try again later.", 'bot');
+            } finally {
+                chatbotSend.disabled = false;
+                chatbotInput.focus();
+            }
+        }
+
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+    }
+
     // Course Category Expand/Collapse functionality
     const courseCategories = document.querySelectorAll('.course-category');
     

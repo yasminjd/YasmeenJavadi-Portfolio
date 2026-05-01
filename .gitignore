@@ -9,3 +9,17 @@ dist/
 .env.production.local
 public/itsupport-demo.mov
 *.heic
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Test files (don't need in production)
+test*.py
+chatbot.py
+chatbot_api.py
