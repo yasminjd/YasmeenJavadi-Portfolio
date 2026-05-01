@@ -2,8 +2,6 @@ node_modules/
 dist/
 .DS_Store
 *.log
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -23,3 +21,4 @@ __pycache__/
 test*.py
 chatbot.py
 chatbot_api.py
+config.bat
